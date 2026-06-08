@@ -3,10 +3,10 @@ import { FaGithub, FaGlobe } from 'react-icons/fa';
 
 const Maintainers = () => {
   const maintainers = [
-    { name: "Alex Rivera", role: "Project Lead", github: "#", website: "#" },
-    { name: "Sarah Chen", role: "Frontend Architect", github: "#", website: "#" },
-    { name: "Marcus Thorne", role: "Backend Lead", github: "#", website: "#" },
-    { name: "Elena Volkov", role: "Developer Advocate", github: "#", website: "#" }
+    { name: "Alex Rivera", github: "#", website: "#" },
+    { name: "Sarah Chen", github: "#", website: "#" },
+    { name: "Marcus Thorne", github: "#", website: "#" },
+    { name: "Elena Volkov", github: "#", website: "#" }
   ];
 
   return (
@@ -22,8 +22,7 @@ const Maintainers = () => {
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gray-100 border border-gray-200 group-hover:border-black transition-all overflow-hidden group-hover:-translate-y-1">
                 <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${person.name}`} alt={person.name} className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-1">{person.name}</h3>
-              <p className="text-gray-500 text-sm mb-6 font-mono">{person.role}</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-6">{person.name}</h3>
               <div className="flex justify-center space-x-4">
                 <a href={person.github} className="text-gray-400 hover:text-black transition-colors">
                   <FaGithub size={20} />

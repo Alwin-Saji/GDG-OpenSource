@@ -65,6 +65,44 @@ const Workflow = () => {
     }
   ];
 
+  const timelineEvents = [
+    {
+      date: "Jun 15",
+      event: "Applications Open",
+      description: "Start of the registration period. Register your profile.",
+      color: "bg-[#4285F4]",
+      clip: "group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#4285F4] group-hover:to-[#8AB4F8]"
+    },
+    {
+      date: "Jun 18 - Jun 21",
+      event: "Contributor Onboarding",
+      description: "Training sessions and introductions to the open source workflow.",
+      color: "bg-[#34A853]",
+      clip: "group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#34A853] group-hover:to-[#81C995]"
+    },
+    {
+      date: "Jun 22",
+      event: "Issues Released",
+      description: "Contributions open. Start looking for issues matching your skills.",
+      color: "bg-[#FBBC04]",
+      clip: "group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#FBBC04] group-hover:to-[#FCE8B2]"
+    },
+    {
+      date: "Jun 22 - Jun 28",
+      event: "Contribution Period",
+      description: "Submit pull requests and collaborate with maintainers.",
+      color: "bg-[#EA4335]",
+      clip: "group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#EA4335] group-hover:to-[#F28B82]"
+    },
+    {
+      date: "July 2",
+      event: "Final Evaluation",
+      description: "Results are announced and rewards are distributed.",
+      color: "bg-[#4285F4]",
+      clip: "group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#4285F4] group-hover:to-[#8AB4F8]"
+    }
+  ];
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       // 1. Vertical Line filling animation
@@ -101,8 +139,7 @@ const Workflow = () => {
   return (
     <section id="workflow" ref={sectionRef} className="py-32 bg-white relative overflow-hidden">
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-32">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -110,7 +147,7 @@ const Workflow = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-32"
         >
-          <h2 className="text-6xl md:text-7xl font-black tracking-tighter text-gray-900 mb-6">
+          <h2 className="text-6xl md:text-7xl font-bold tracking-tighter text-gray-900 mb-6">
             How it works.
           </h2>
           <p className="text-gray-500 text-xl max-w-2xl mx-auto">
@@ -120,12 +157,12 @@ const Workflow = () => {
 
         <div className="relative py-10" ref={trackRef}>
           {/* Base Vertical Track */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-[4px] bg-gray-100 transform md:-translate-x-1/2 rounded-full overflow-hidden" />
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-[3px] bg-gray-100 transform md:-translate-x-1/2 rounded-full overflow-hidden" />
 
           {/* Animated GSAP Vertical Fill */}
           <div
             ref={lineRef}
-            className="absolute left-8 md:left-1/2 top-0 w-[4px] bg-gradient-to-b from-[#4285F4] via-[#EA4335] via-[#FBBC04] to-[#34A853] transform md:-translate-x-1/2 rounded-full origin-top"
+            className="absolute left-8 md:left-1/2 top-0 w-[3px] bg-gradient-to-b from-[#4285F4] via-[#EA4335] via-[#FBBC04] to-[#34A853] transform md:-translate-x-1/2 rounded-full origin-top"
             style={{ height: "0%" }}
           />
 
@@ -140,7 +177,7 @@ const Workflow = () => {
                   {/* Timeline Dot (Smaller) */}
                   <div
                     ref={el => dotsRef.current[index] = el}
-                    className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white border-[4px] border-gray-100 rounded-full flex items-center justify-center shadow-sm z-20"
+                    className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white border-[2px] border-gray-100 rounded-full flex items-center justify-center shadow-sm z-20"
                   >
                     <span className={`text-sm font-black ${step.color}`}>{step.number}</span>
                   </div>
@@ -155,23 +192,21 @@ const Workflow = () => {
                       transition={{ duration: 0.5, type: "spring", bounce: 0.3, delay: 0.1 }}
                       className={`w-full md:w-[45%] pl-24 md:pl-0 ${isEven ? 'md:pr-16 text-left' : 'md:pl-16 text-left'}`}
                     >
-                      {/* Compact Horizontal Card */}
-                      <div className="relative group p-6 bg-white rounded-2xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-gray-300 flex items-start gap-5">
+                      {/* Minimalist Card */}
+                      <div className="relative group py-4 transition-all border border-transparent hover:border-black px-4 rounded-xl duration-500 flex items-start gap-6 opacity-80 hover:opacity-100">
 
-                        {/* Compact Icon */}
-                        <div className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center border border-white/50" style={{ backgroundColor: step.rgba }}>
+                        <div className="shrink-0 mt-1">
                           <Icon className={`w-5 h-5 ${step.color}`} />
                         </div>
 
-                        {/* Compact Typography */}
                         <div>
-                          <div className="text-xs font-black tracking-widest uppercase mb-1" style={{ color: step.hex }}>
+                          <div className="text-xs font-semibold tracking-wider text-gray-600 mb-2 uppercase">
                             Phase {step.number}
                           </div>
-                          <h3 className="text-xl font-bold text-gray-900 mb-2 tracking-tight">
+                          <h3 className="text-lg font-medium text-gray-900 mb-2 tracking-tight">
                             {step.title}
                           </h3>
-                          <p className="text-gray-500 text-sm leading-relaxed font-medium">
+                          <p className="text-gray-900 text-sm leading-relaxed max-w-sm">
                             {step.description}
                           </p>
                         </div>
@@ -186,6 +221,64 @@ const Workflow = () => {
           </div>
         </div>
       </div>
+
+      {/* Timeline Section integrated here */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 border-t border-gray-100">
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-gray-900 mb-4">
+            Timeline.
+          </h2>
+          <p className="text-gray-500 text-lg font-medium">
+            The schedule for the open source contribution period.
+          </p>
+        </div>
+
+        <div className="relative overflow-x-auto pb-8 hide-scrollbar">
+          <div className="min-w-[900px] relative pt-6">
+            {/* Horizontal Track */}
+            <div className="absolute top-[31px] left-0 right-0 h-[2px] bg-gray-100 rounded-full"></div>
+
+            <div className="flex justify-between gap-8 relative z-10">
+              {timelineEvents.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex-1 min-w-[160px] relative group"
+                >
+                  {/* Node Dot */}
+                  <div className={`w-4 h-4 rounded-full border-2 border-white shadow-sm mb-6 ${item.color} relative z-10 transition-transform duration-300 group-hover:scale-125`}></div>
+
+                  {/* Content */}
+                  <div className="pr-4">
+                    <div className="text-sm font-bold tracking-wider text-gray-400 mb-2 uppercase">
+                      {item.date}
+                    </div>
+                    <h3 className={`text-xl font-bold text-gray-900 mb-2 leading-tight transition-all duration-300 ${item.clip}`}>
+                      {item.event}
+                    </h3>
+                    <p className="text-gray-500 text-sm font-medium leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>{`
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .hide-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
     </section>
   );
 };

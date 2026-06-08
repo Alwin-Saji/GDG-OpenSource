@@ -11,7 +11,7 @@ const Leaderboard = () => {
   ];
 
   return (
-    <section id="leaderboard" className="py-24 bg-gray-50 border-y border-gray-100">
+    <section id="leaderboard" className="py-24 border-y border-gray-100">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row items-center justify-between mb-12 gap-4">
           <h2 className="text-4xl md:text-5xl font-black text-black tracking-tight">
