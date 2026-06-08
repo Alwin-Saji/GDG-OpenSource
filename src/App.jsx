@@ -29,7 +29,7 @@ function App() {
         {isLoading && <Loader key="loader" />}
       </AnimatePresence>
       
-      <CustomScrollbar />
+      {!isLoading && <CustomScrollbar />}
       <FloatingElements />
       <Navbar />
       

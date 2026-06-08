@@ -13,11 +13,31 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    let isLoaded = false;
+    let lastKnownScrollY = window.scrollY || 0;
+    
+    // Track scroll position continuously but don't apply it to the UI until loaded
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+      lastKnownScrollY = window.scrollY;
+      if (isLoaded) {
+        setScrolled(lastKnownScrollY > 40);
+      }
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Wait for the initial loader to finish and layout to settle (2.8s + buffer)
+    const timer = setTimeout(() => {
+      isLoaded = true;
+      // Now safe to apply the background, using the real scroll position
+      // instead of a potentially jumpy layout-shift reading
+      setScrolled(lastKnownScrollY > 40);
+    }, 3500);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(timer);
+    };
   }, []);
 
   return (

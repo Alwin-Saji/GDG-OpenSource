@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { motion, useScroll, useSpring } from 'framer-motion';
+import { motion, useScroll, useSpring, useMotionValueEvent } from 'framer-motion';
 
 const CustomScrollbar = () => {
-  const { scrollYProgress } = useScroll();
+  const { scrollYProgress, scrollY } = useScroll();
   const [isVisible, setIsVisible] = useState(false);
   const [svgHeight, setSvgHeight] = useState(0);
+  const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
     const checkScrollable = () => {
@@ -16,17 +17,28 @@ const CustomScrollbar = () => {
     checkScrollable();
     window.addEventListener('resize', checkScrollable);
     
-    // Automatically detect when page height changes (e.g. after loading animation finishes)
+    // Automatically detect when page height changes
     const resizeObserver = new ResizeObserver(() => {
       checkScrollable();
     });
     resizeObserver.observe(document.body);
     
+    // If user refreshed while already scrolled down, reveal it immediately
+    if (window.scrollY > 40) {
+      setHasScrolled(true);
+    }
+
     return () => {
       window.removeEventListener('resize', checkScrollable);
       resizeObserver.disconnect();
     };
   }, []);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (!hasScrolled && latest > 40) {
+      setHasScrolled(true);
+    }
+  });
 
   const smoothProgress = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -49,7 +61,12 @@ const CustomScrollbar = () => {
   `.replace(/\s+/g, ' ').trim();
 
   return (
-    <div className="fixed top-0 right-2 w-6 h-screen z-[100] pointer-events-none py-4 flex justify-end">
+    <motion.div 
+      className="fixed top-0 right-2 w-6 h-screen z-[100] pointer-events-none py-4 flex justify-end"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: hasScrolled ? 1 : 0 }}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
+    >
       <svg
         viewBox={`0 0 20 ${svgHeight}`}
         width="20"
@@ -94,7 +111,7 @@ const CustomScrollbar = () => {
           }}
         />
       </svg>
-    </div>
+    </motion.div>
   );
 };
 
