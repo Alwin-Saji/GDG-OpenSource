@@ -17,12 +17,10 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-[100dvh] flex items-center justify-center bg-white overflow-hidden">
-      {/* Zero Gravity Particle Animation */}
+      {/* Google Antigravity Style Animation */}
       <ZeroGravityParticles 
-        particleCount={150}
-        minSize={1}
-        maxSize={3}
-        speedMultiplier={2}
+        particleCount={200}
+        speedMultiplier={1}
       />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center justify-center text-center pointer-events-none mt-4">
