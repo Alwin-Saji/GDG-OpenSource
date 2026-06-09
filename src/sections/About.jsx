@@ -5,19 +5,19 @@ const About = () => {
   const features = [
     {
       icon: <MdAdsClick className="text-gray-400 group-hover:text-[#4285F4] transition-colors duration-300" size={24} />,
-      title: "🛠️ Hands-On Contribution",
+      title: "Hands-On Contribution",
       description: "Pick real issues from curated open source projects, work directly with maintainers, and get your pull requests reviewed and merged into production codebases.",
       gradientClass: "group-hover:bg-gradient-to-r group-hover:from-[#4285F4] group-hover:to-[#EA4335]"
     },
     {
       icon: <MdGroups className="text-gray-400 group-hover:text-[#EA4335] transition-colors duration-300" size={24} />,
-      title: "🤝 Guided by Maintainers",
+      title: "Guided by Maintainers",
       description: "Every project comes with a dedicated maintainer who knows the codebase inside out — they'll assign issues, review your PRs, and help you grow as a contributor.",
       gradientClass: "group-hover:bg-gradient-to-r group-hover:from-[#EA4335] group-hover:to-[#FBBC04]"
     },
     {
       icon: <MdBolt className="text-gray-400 group-hover:text-[#34A853] transition-colors duration-300" size={24} />,
-      title: "📈 Build Your GitHub Profile",
+      title: "Build Your GitHub Profile",
       description: "Every merged PR is a permanent mark on your GitHub. Walk away from GDG Season of Code with real contributions, real experience, and a profile that speaks for itself.",
       gradientClass: "group-hover:bg-gradient-to-r group-hover:from-[#FBBC04] group-hover:to-[#34A853]"
     }
