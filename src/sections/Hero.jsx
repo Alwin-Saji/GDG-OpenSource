@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import Antigravity from '../components/Antigravity';
+import FloatingShapes from '../components/FloatingShapes';
 
 const Hero = () => {
   const titleRef = useRef(null);
@@ -17,20 +17,9 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-[100dvh] flex items-center justify-center bg-white overflow-hidden">
-      {/* Whisper-quiet background effect */}
-      <div className="absolute inset-0 z-0 pointer-events-auto">
-        <Antigravity
-          count={400}
-          magnetRadius={2}
-          ringRadius={6}
-          waveSpeed={0.2}
-          waveAmplitude={2}
-          particleSize={0.5}
-          lerpSpeed={0.02}
-          color={'#4285F4'}
-          autoAnimate={true}
-          particleVariance={0.5}
-        />
+      {/* Weightless floating geometric shapes */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <FloatingShapes />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center justify-center text-center pointer-events-none mt-4">
