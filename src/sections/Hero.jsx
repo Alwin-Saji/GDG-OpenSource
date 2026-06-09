@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import Antigravity from '../components/Antigravity';
+import ZeroGravityParticles from '../components/ZeroGravityParticles';
 
 const Hero = () => {
   const titleRef = useRef(null);
@@ -33,14 +33,14 @@ const Hero = () => {
         />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center text-center pointer-events-none mt-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center justify-center text-center pointer-events-none mt-4">
 
         <p className="text-[10px] sm:text-[11px] font-medium tracking-[0.25em] text-gray-900 uppercase mb-12">
           Google Developer Groups on Campus Presents
         </p>
 
         {/* Layered Stroke Typography Title */}
-        <div className="relative mb-24 flex flex-col items-center justify-center w-full">
+        <div className="relative mb-16 sm:mb-20 md:mb-24 flex flex-col items-center justify-center w-full">
           {/* Background Gradient Outline Text */}
           <span
                        className="text-[5.5rem] min-[400px]:text-[7rem] sm:text-[12rem] md:text-[14rem] font-black tracking-tighter select-none leading-none opacity-60 bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC04,#34A853)]"
@@ -58,7 +58,7 @@ const Hero = () => {
           <h1 className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex justify-center pointer-events-auto">
             <div
               ref={titleRef}
-              className="relative cursor-none px-4 py-2"
+              className="relative px-2 sm:px-4 py-2"
               onMouseMove={handleMouseMove}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
@@ -80,6 +80,16 @@ const Hero = () => {
               </span>
             </div>
           </h1>
+        </div>
+
+        {/* Taglines */}
+        <div className="flex flex-col items-center gap-2 mb-6 sm:mb-8 pointer-events-none">
+          <p className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 tracking-tight">
+            Build. Contribute. Ship.
+          </p>
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 font-light tracking-wide">
+            Your first open source contribution starts here.
+          </p>
         </div>
 
         {/* Minimal Animated Buttons v7 */}

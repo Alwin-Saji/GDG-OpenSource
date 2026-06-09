@@ -67,7 +67,7 @@ const Faq = () => {
                   </span>
                   
                   {/* Custom Minimalist Plus/Minus Icon */}
-                  <div className="relative w-5 h-5 flex-shrink-0 ml-6 flex items-center justify-center">
+                  <div className="relative w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 ml-4 sm:ml-6 flex items-center justify-center">
                     <motion.div 
                       className="absolute w-full h-[1.5px]"
                       style={{ backgroundColor: isOpen ? faq.color : '#9CA3AF' }}

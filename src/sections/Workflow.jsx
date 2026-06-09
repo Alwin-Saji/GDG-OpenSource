@@ -166,15 +166,15 @@ const Workflow = () => {
   }, []);
 
   return (
-    <section id="workflow" ref={sectionRef} className="py-32 bg-white relative overflow-hidden">
+    <section id="workflow" ref={sectionRef} className="py-16 sm:py-24 md:py-32 bg-white relative overflow-hidden">
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-32">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-16 sm:mb-24 md:mb-32">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-32"
+          className="text-center mb-16 sm:mb-24 md:mb-32"
         >
           <h2 className="text-4xl md:text-7xl font-bold tracking-tighter text-gray-900 mb-6">
             How it works.
