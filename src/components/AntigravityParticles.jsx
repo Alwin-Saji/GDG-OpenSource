@@ -102,7 +102,7 @@ const AntigravityParticles = ({
         this.rotationSpeed = (Math.random() - 0.5) * 0.01; // Very slow rotation
         this.sprite = getSprite(this.color, this.lineLength);
         this.depth = Math.random() * 0.5 + 0.5; // Less depth variation
-        this.opacity = 0.4 + Math.random() * 0.3; // Subtle opacity
+        this.opacity = 0.5 + Math.random() * 0.3; // More visible opacity (50-80%)
       }
 
 
@@ -192,7 +192,8 @@ const AntigravityParticles = ({
 
       draw() {
         ctx.save();
-        ctx.globalAlpha = this.opacity;
+        // Ensure minimum opacity so particles never fully disappear
+        ctx.globalAlpha = Math.max(0.3, this.opacity);
         ctx.translate(this.x, this.y);
         ctx.rotate(this.rotation);
         
@@ -261,7 +262,8 @@ const AntigravityParticles = ({
         left: 0,
         width: '100%',
         height: '100%',
-        pointerEvents: 'none'
+        pointerEvents: 'none',
+        zIndex: 0
       }}
     />
   );
