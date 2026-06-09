@@ -54,7 +54,7 @@ print("Total:", total)`;
       </div>
       
       {/* Terminal Body */}
-      <div className="p-6 relative h-[280px] overflow-hidden text-[13px] leading-relaxed">
+      <div className="p-6 relative h-[340px] md:h-[280px] overflow-hidden text-[13px] leading-relaxed">
         <AnimatePresence mode="wait">
           <motion.pre
             key={activeTab}
@@ -62,7 +62,7 @@ print("Total:", total)`;
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -5 }}
             transition={{ duration: 0.2 }}
-            className="m-0"
+            className="m-0 whitespace-pre-wrap break-words"
           >
             <code className={activeTab === 'terrible' ? 'text-red-300' : 'text-[#a5d6ff]'}>
               {activeTab === 'terrible' ? terribleCode : standardCode}
@@ -135,24 +135,24 @@ const ContributorGuidelines = () => {
   ];
 
   return (
-    <main className="min-h-screen pt-40 pb-32 bg-white selection:bg-gray-100 selection:text-black">
+    <main className="min-h-screen pt-28 md:pt-40 pb-20 md:pb-32 bg-white selection:bg-gray-100 selection:text-black">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <motion.div 
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
-          className="mb-32"
+          className="mb-20 md:mb-32"
         >
-          <h1 className="text-5xl md:text-6xl font-light tracking-tighter text-gray-900 mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tighter text-gray-900 mb-6">
             Contributor Guide.
           </h1>
-          <p className="text-xl text-gray-500 font-light max-w-xl leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-500 font-light max-w-xl leading-relaxed">
             Everything you need to know to start contributing high-quality code to our ecosystem.
           </p>
         </motion.div>
 
-        <div className="space-y-24">
+        <div className="space-y-16 md:space-y-24">
           {sections.map((section, index) => (
             <motion.section 
               key={index}
@@ -172,7 +172,7 @@ const ContributorGuidelines = () => {
                     {section.title}
                   </h2>
                 </div>
-                <div className="md:w-2/3 text-gray-500 font-light text-lg leading-relaxed">
+                <div className="md:w-2/3 text-gray-500 font-light text-sm md:text-lg leading-relaxed pl-5">
                   {section.content}
                 </div>
               </div>

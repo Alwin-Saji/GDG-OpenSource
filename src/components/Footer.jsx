@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="pt-20 pb-10 mt-10">
+    <footer className="pt-20 pb-10 border-t mt-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Main Footer Content */}
         <div className="flex flex-col md:flex-row justify-between items-start gap-10 md:gap-16 mb-16">
-          
+
           {/* Brand */}
           <div className="flex flex-col items-start max-w-sm">
             <h2 className="text-2xl font-bold text-black tracking-tight mb-3 flex items-center gap-2">
@@ -19,7 +19,7 @@ const Footer = () => {
                 <span className="w-2 h-2 rounded-full bg-[#FBBC04]"></span>
                 <span className="w-2 h-2 rounded-full bg-[#34A853]"></span>
               </div>
-              GDG Season of Code
+                Season of Code
             </h2>
             <p className="text-gray-500 text-sm leading-relaxed mb-6">
               Empowering developers to build the open-source ecosystem together. Join thousands of contributors making a difference.
@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
 
           {/* Links grid */}
-          <div className="flex flex-wrap gap-12 sm:gap-20">
+          <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-x-8 gap-y-10 sm:gap-20">
             {/* Nav Links */}
             <div>
               <h4 className="text-black font-semibold mb-4 text-sm">Navigation</h4>
@@ -52,9 +52,9 @@ const Footer = () => {
                 <li><a href="#" className="text-sm text-gray-500 hover:text-black transition-colors">API Reference</a></li> */}
               </ul>
             </div>
-            
+
             {/* Contact Info */}
-            <div>
+            <div className="col-span-2 sm:col-span-1">
               <h4 className="text-black font-semibold mb-4 text-sm">Contact</h4>
               <ul className="space-y-4">
                 <li>
@@ -80,14 +80,14 @@ const Footer = () => {
                     <FaMapMarkerAlt className="text-gray-400 mt-0.5 group-hover:text-black transition-colors" size={14} />
                     <div className="flex flex-col">
                       <span className="text-sm font-medium text-black">Location</span>
-                      <span className="text-sm text-gray-500 group-hover:text-black transition-colors">College of Engineering Chengannur,<br/>Alappuzha, Kerala - 689121</span>
+                      <span className="text-sm text-gray-500 group-hover:text-black transition-colors">College of Engineering Chengannur,<br />Alappuzha, Kerala - 689121</span>
                     </div>
                   </a>
                 </li>
               </ul>
             </div>
           </div>
-          
+
         </div>
 
         {/* Bottom Section */}
@@ -95,7 +95,7 @@ const Footer = () => {
           <p className="text-sm text-gray-400">
             &copy; {new Date().getFullYear()} GDG CEC. All rights reserved.
           </p>
-          
+
           <div className="flex gap-5">
             <a href="#" className="text-gray-400 hover:text-[#E1306C] transition-colors" aria-label="Instagram">
               <FaInstagram size={18} />
@@ -105,7 +105,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        
+
       </div>
     </footer>
   );

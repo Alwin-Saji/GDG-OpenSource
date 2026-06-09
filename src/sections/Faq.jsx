@@ -37,11 +37,11 @@ const Faq = () => {
   };
 
   return (
-    <section id="faq" className="py-32 bg-white relative">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="py-16 md:py-32 bg-white relative">
+      <div className="w-[80vw] md:w-full max-w-3xl mx-auto md:px-6 lg:px-8">
         
-        <div className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 tracking-tight">
+        <div className="mb-10 md:mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 tracking-tight">
             FAQ
           </h2>
         </div>
@@ -57,10 +57,10 @@ const Faq = () => {
               >
                 <button
                   onClick={() => toggleFaq(index)}
-                  className="w-full py-8 flex items-center justify-between text-left focus:outline-none"
+                  className="w-full py-6 md:py-8 flex items-center justify-between text-left focus:outline-none"
                 >
                   <span 
-                    className="text-xl md:text-2xl font-light transition-colors duration-500"
+                    className="text-md md:text-2xl font-light transition-colors duration-500"
                     style={{ color: isOpen ? faq.color : '#111827' }}
                   >
                     {faq.question}
@@ -99,7 +99,7 @@ const Faq = () => {
                       }}
                       className="overflow-hidden"
                     >
-                      <div className="pb-8 text-gray-500 font-light text-lg leading-relaxed pr-12">
+                      <div className="pb-6 md:pb-8 text-gray-500 font-light text-sm md:text-lg leading-relaxed pr-6 md:pr-12">
                         {faq.answer}
                       </div>
                     </motion.div>

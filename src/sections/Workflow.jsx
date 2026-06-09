@@ -11,6 +11,8 @@ const Workflow = () => {
   const trackRef = useRef(null);
   const lineRef = useRef(null);
   const dotsRef = useRef([]);
+  const timelineSectionRef = useRef(null);
+  const timelineContentRef = useRef(null);
 
   const steps = [
     {
@@ -131,6 +133,33 @@ const Workflow = () => {
           }
         });
       });
+
+      // 3. Horizontal scroll for Timeline on mobile
+      let mm = gsap.matchMedia();
+      mm.add("(max-width: 1023px)", () => {
+        if (timelineContentRef.current && timelineSectionRef.current) {
+          let getScrollAmount = () => {
+            let amount = timelineContentRef.current.scrollWidth - timelineSectionRef.current.offsetWidth + 48;
+            return amount > 0 ? amount : 0;
+          };
+
+          const timelineWrapper = timelineContentRef.current.parentElement;
+
+          gsap.to(timelineContentRef.current, {
+            x: () => -getScrollAmount(),
+            ease: "none",
+            scrollTrigger: {
+              trigger: timelineWrapper,
+              start: "center center",
+              end: () => `+=${getScrollAmount()}`,
+              pin: true,
+              scrub: 1,
+              invalidateOnRefresh: true,
+            }
+          });
+        }
+      });
+
     }, sectionRef);
 
     return () => ctx.revert();
@@ -147,26 +176,26 @@ const Workflow = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-32"
         >
-          <h2 className="text-6xl md:text-7xl font-bold tracking-tighter text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-7xl font-bold tracking-tighter text-gray-900 mb-6">
             How it works.
           </h2>
-          <p className="text-gray-500 text-xl max-w-2xl mx-auto">
+          <p className="text-gray-500 text-md md:text-xl max-w-2xl mx-auto">
             A seamless, vertical integration process designed to get your code into the core as quickly as possible.
           </p>
         </motion.div>
 
         <div className="relative py-10" ref={trackRef}>
           {/* Base Vertical Track */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-[3px] bg-gray-100 transform md:-translate-x-1/2 rounded-full overflow-hidden" />
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-[3px] bg-gray-100 transform md:-translate-x-1/2 rounded-full overflow-hidden" />
 
           {/* Animated GSAP Vertical Fill */}
           <div
             ref={lineRef}
-            className="absolute left-8 md:left-1/2 top-0 w-[3px] bg-gradient-to-b from-[#4285F4] via-[#EA4335] via-[#FBBC04] to-[#34A853] transform md:-translate-x-1/2 rounded-full origin-top"
+            className="absolute left-6 md:left-1/2 top-0 w-[3px] bg-gradient-to-b from-[#4285F4] via-[#EA4335] via-[#FBBC04] to-[#34A853] transform md:-translate-x-1/2 rounded-full origin-top"
             style={{ height: "0%" }}
           />
 
-          <div className="space-y-12">
+          <div className="space-y-10 md:space-y-12">
             {steps.map((step, index) => {
               const isEven = index % 2 === 0;
               const Icon = step.icon;
@@ -177,9 +206,9 @@ const Workflow = () => {
                   {/* Timeline Dot (Smaller) */}
                   <div
                     ref={el => dotsRef.current[index] = el}
-                    className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white border-[2px] border-gray-100 rounded-full flex items-center justify-center shadow-sm z-20"
+                    className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-10 h-10 md:w-12 md:h-12 bg-white border-[2px] border-gray-100 rounded-full flex items-center justify-center shadow-sm z-20"
                   >
-                    <span className={`text-sm font-black ${step.color}`}>{step.number}</span>
+                    <span className={`text-xs md:text-sm font-black ${step.color}`}>{step.number}</span>
                   </div>
 
                   {/* Card Container */}
@@ -190,25 +219,25 @@ const Workflow = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, margin: "-100px" }}
                       transition={{ duration: 0.5, type: "spring", bounce: 0.3, delay: 0.1 }}
-                      className={`w-full md:w-[45%] pl-24 md:pl-0 ${isEven ? 'md:pr-16 text-left' : 'md:pl-16 text-left'}`}
+                      className={`w-full md:w-[45%] pl-16 sm:pl-20 md:pl-0 ${isEven ? 'md:pr-16 text-left' : 'md:pl-16 text-left'}`}
                     >
                       {/* Minimalist Card */}
-                      <div className="relative group py-4 transition-all border border-transparent hover:border-black px-4 rounded-xl duration-500 flex items-start gap-6 opacity-80 hover:opacity-100">
-
-                        <div className="shrink-0 mt-1">
-                          <Icon className={`w-5 h-5 ${step.color}`} />
-                        </div>
+                      <div className="relative group py-4 transition-all border border-transparent hover:border-black px-2 sm:px-4 rounded-xl duration-500 flex flex-row items-start justify-between gap-4 sm:gap-6 opacity-80 hover:opacity-100">
 
                         <div>
-                          <div className="text-xs font-semibold tracking-wider text-gray-600 mb-2 uppercase">
+                          {/* <div className="text-xs font-semibold tracking-wider text-gray-600 mb-2 uppercase">
                             Phase {step.number}
-                          </div>
-                          <h3 className="text-lg font-medium text-gray-900 mb-2 tracking-tight">
+                          </div> */}
+                          <h3 className="text-md uppercase font-bold md:text-xl text-gray-900 mb-2 tracking-tight">
                             {step.title}
                           </h3>
-                          <p className="text-gray-900 text-sm leading-relaxed max-w-sm">
+                          <p className="text-gray-900 text-[12px] md:text-sm leading-relaxed max-w-sm">
                             {step.description}
                           </p>
+                        </div>
+
+                        <div className="shrink-0 mt-1">
+                          <Icon className={`w-5 h-5 sm:w-6 sm:h-6 ${step.color}`} />
                         </div>
 
                       </div>
@@ -223,47 +252,66 @@ const Workflow = () => {
       </div>
 
       {/* Timeline Section integrated here */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 border-t border-gray-100">
-        <div className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-gray-900 mb-4">
-            Timeline.
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16" ref={timelineSectionRef}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-20 flex flex-col items-center text-center"
+        >
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 mb-6">
+            The Timeline.
           </h2>
-          <p className="text-gray-500 text-lg font-medium">
-            The schedule for the open source contribution period.
+          <p className="text-gray-500 text-md md:text-xl font-light max-w-2xl">
+            A precise schedule orchestrating the open source contribution period from initiation to final evaluation.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="relative overflow-x-auto pb-8 hide-scrollbar">
-          <div className="min-w-[900px] relative pt-6">
-            {/* Horizontal Track */}
-            <div className="absolute top-[31px] left-0 right-0 h-[2px] bg-gray-100 rounded-full"></div>
+        <div className="relative overflow-hidden pb-12 hide-scrollbar">
+          <div className="min-w-[1000px] relative pt-12 px-4" ref={timelineContentRef}>
+            {/* Horizontal Track with Gradient */}
+            <div className="absolute top-[55px] left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
 
-            <div className="flex justify-between gap-8 relative z-10">
+            <div className="flex justify-between gap-12 relative z-10">
               {timelineEvents.map((item, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex-1 min-w-[160px] relative group"
+                  className="flex-1 min-w-[200px] relative group cursor-pointer"
                 >
-                  {/* Node Dot */}
-                  <div className={`w-4 h-4 rounded-full border-2 border-white shadow-sm mb-6 ${item.color} relative z-10 transition-transform duration-300 group-hover:scale-125`}></div>
+                  {/* Immersive Node Dot */}
+                  <motion.div 
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.15, type: "spring", bounce: 0.4 }}
+                    className="flex justify-center mb-10 relative"
+                  >
+                    {/* Glowing backdrop on hover */}
+                    <div className={`absolute inset-0 m-auto w-12 h-12 rounded-full ${item.color} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500`}></div>
+                    <div className={`w-3 h-3 rounded-full shadow-md ${item.color} relative z-10 ring-4 ring-white transition-all duration-500 group-hover:scale-150 group-hover:ring-gray-50`}></div>
+                  </motion.div>
 
-                  {/* Content */}
-                  <div className="pr-4">
-                    <div className="text-sm font-bold tracking-wider text-gray-400 mb-2 uppercase">
+                  {/* Luxurious Content Card */}
+                  <motion.div 
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.7, delay: index * 0.15 + 0.1, ease: "easeOut" }}
+                    className="bg-white/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-50 shadow-[0_8px_30px_rgb(0,0,0,0.02)] transition-all duration-500 group-hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] group-hover:-translate-y-2 group-hover:border-gray-100"
+                  >
+                    <div className="text-[10px] md:text-xs md:font-semibold tracking-widest text-gray-400 mb-4 uppercase flex items-center gap-2">
+                      <span className={`w-1 h-1 rounded-full ${item.color}`}></span>
                       {item.date}
                     </div>
-                    <h3 className={`text-xl font-bold text-gray-900 mb-2 leading-tight transition-all duration-300 ${item.clip}`}>
+                    <h3 className={`text-md md:text-xl font-medium text-gray-900 mb-3 leading-snug transition-all duration-300 ${item.clip}`}>
                       {item.event}
                     </h3>
-                    <p className="text-gray-500 text-sm font-medium leading-relaxed">
+                    <p className="text-gray-500 text-[12px] md:text-sm font-light leading-relaxed">
                       {item.description}
                     </p>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                </div>
               ))}
             </div>
           </div>

@@ -16,7 +16,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-[100dvh] flex items-center justify-center bg-white overflow-hidden">
+    <section className="relative min-h-[100dvh] flex items-center justify-center bg-white overflow-hidden pt-20 pb-16">
       {/* Whisper-quiet background effect */}
       <div className="absolute inset-0 z-0 pointer-events-auto">
         <Antigravity
@@ -36,27 +36,27 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center text-center pointer-events-none mt-4">
 
         <p className="text-[10px] sm:text-[11px] font-medium tracking-[0.25em] text-gray-900 uppercase mb-12">
-          Google Developer Groups Presents
+          Google Developer Groups on Campus Presents
         </p>
 
         {/* Layered Stroke Typography Title */}
         <div className="relative mb-24 flex flex-col items-center justify-center w-full">
           {/* Background Gradient Outline Text */}
           <span
-            className="text-[8rem] sm:text-[12rem] md:text-[16rem] font-black tracking-tighter select-none leading-none opacity-60 bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC04,#34A853)]"
-            style={{
+                       className="text-[5.5rem] min-[400px]:text-[7rem] sm:text-[12rem] md:text-[14rem] font-black tracking-tighter select-none leading-none opacity-60 bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC04,#34A853)]"
+           style={{
               WebkitBackgroundClip: 'text',
               backgroundClip: 'text',
               WebkitTextFillColor: 'white',
-              WebkitTextStroke: '3px transparent'
+              WebkitTextStroke: '4px transparent'
             }}
           >
-            GDG
+            GDG on Campus
           </span>
 
           {/* Spotlight Reveal Hover Text */}
           <h1 className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex justify-center pointer-events-auto">
-            <div 
+            <div
               ref={titleRef}
               className="relative cursor-none px-4 py-2"
               onMouseMove={handleMouseMove}
@@ -64,13 +64,13 @@ const Hero = () => {
               onMouseLeave={() => setIsHovered(false)}
             >
               {/* Base Text (Solid Black) */}
-              <span className="text-5xl sm:text-7xl md:text-[7.5rem] font-bold tracking-tight text-gray-900 block select-none">
+              <span className="text-4xl min-[400px]:text-5xl sm:text-7xl md:text-[7.5rem] font-bold tracking-tight text-gray-900 block select-none whitespace-nowrap">
                 Season of Code
               </span>
-              
+
               {/* Reveal Text (Gradient clipped by a circle) */}
-              <span 
-                className="absolute inset-0 px-4 py-2 text-5xl sm:text-7xl md:text-[7.5rem] font-bold tracking-tight text-transparent bg-clip-text bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC04,#34A853)] block pointer-events-none transition-opacity duration-300 select-none"
+              <span
+                className="absolute inset-0 px-4 py-2 text-4xl min-[400px]:text-5xl sm:text-7xl md:text-[7.5rem] font-bold tracking-tight text-transparent bg-clip-text bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC04,#34A853)] block pointer-events-none transition-opacity duration-300 select-none whitespace-nowrap"
                 style={{
                   opacity: isHovered ? 1 : 0,
                   clipPath: `circle(80px at ${mousePos.x}px ${mousePos.y}px)`
@@ -83,8 +83,8 @@ const Hero = () => {
         </div>
 
         {/* Minimal Animated Buttons v7 */}
-        <div className="flex flex-col sm:flex-row items-center gap-8 pointer-events-auto mt-6">
-          
+        <div className="flex flex-col sm:flex-row items-center gap-8 pointer-events-auto">
+
           {/* Primary: Expanding Arrow Pop */}
           <a href="#register" className="group relative h-[52px] px-8 bg-[#111] text-white rounded-full text-sm font-medium tracking-wide transition-all duration-300 hover:pr-14 hover:shadow-lg flex items-center overflow-hidden">
             <span className="relative z-10 whitespace-nowrap">Register Now</span>
@@ -94,7 +94,7 @@ const Hero = () => {
               </svg>
             </div>
           </a>
-          
+
           {/* Secondary: Center-Out Underline */}
           <a href="/projects" className="group relative py-2 text-sm font-medium tracking-wide text-gray-500 transition-colors duration-300 hover:text-gray-900">
             Explore projects

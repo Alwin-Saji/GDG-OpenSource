@@ -137,7 +137,7 @@ const Navbar = () => {
             >
               Projects
             </Link>
-            {['About', 'Workflow', 'Leaderboard', 'FAQ'].map((item) => (
+            {['Workflow', 'Leaderboard', 'FAQ'].map((item) => (
               <a
                 key={item}
                 href={`/#${item.toLowerCase()}`}
@@ -153,8 +153,8 @@ const Navbar = () => {
               <div className="pl-2 space-y-1">
                 <Link to="/contributor-guidelines" onClick={() => setIsOpen(false)} className="block py-2 text-sm text-gray-500 hover:text-[#171717] transition-colors">Contributor Guidelines</Link>
                 <Link to="/maintainer-guidelines" onClick={() => setIsOpen(false)} className="block py-2 text-sm text-gray-500 hover:text-[#171717] transition-colors">Maintainer Guidelines</Link>
-                <a href="#" onClick={() => setIsOpen(false)} className="block py-2 text-sm text-gray-500 hover:text-[#171717] transition-colors">Documentation</a>
-                <a href="#" onClick={() => setIsOpen(false)} className="block py-2 text-sm text-gray-500 hover:text-[#171717] transition-colors">API Reference</a>
+                {/* <a href="#" onClick={() => setIsOpen(false)} className="block py-2 text-sm text-gray-500 hover:text-[#171717] transition-colors">Documentation</a>
+                <a href="#" onClick={() => setIsOpen(false)} className="block py-2 text-sm text-gray-500 hover:text-[#171717] transition-colors">API Reference</a> */}
               </div>
             </div>
 

@@ -3,37 +3,37 @@ import { motion } from 'framer-motion';
 
 const Timeline = () => {
   const events = [
-    { 
-      date: "Jun 15", 
-      event: "Applications Open", 
+    {
+      date: "Jun 15",
+      event: "Applications Open",
       description: "Start of the registration period. Register your profile.",
       color: "bg-[#4285F4]",
       clip: "group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#4285F4] group-hover:to-[#8AB4F8]"
     },
-    { 
-      date: "Jun 18 - Jun 21", 
-      event: "Contributor Onboarding", 
+    {
+      date: "Jun 18 - Jun 21",
+      event: "Contributor Onboarding",
       description: "Training sessions and introductions to the open source workflow.",
       color: "bg-[#34A853]",
       clip: "group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#34A853] group-hover:to-[#81C995]"
     },
-    { 
-      date: "Jun 22", 
-      event: "Issues Released", 
+    {
+      date: "Jun 22",
+      event: "Issues Released",
       description: "Contributions open. Start looking for issues matching your skills.",
       color: "bg-[#FBBC04]",
       clip: "group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#FBBC04] group-hover:to-[#FCE8B2]"
     },
-    { 
-      date: "Jun 22 - Jun 28", 
-      event: "Contribution Period", 
+    {
+      date: "Jun 22 - Jun 28",
+      event: "Contribution Period",
       description: "Submit pull requests and collaborate with maintainers.",
       color: "bg-[#EA4335]",
       clip: "group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#EA4335] group-hover:to-[#F28B82]"
     },
-    { 
-      date: "July 2", 
-      event: "Final Evaluation", 
+    {
+      date: "July 2",
+      event: "Final Evaluation",
       description: "Results are announced and rewards are distributed.",
       color: "bg-[#4285F4]",
       clip: "group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#4285F4] group-hover:to-[#8AB4F8]"
@@ -43,7 +43,7 @@ const Timeline = () => {
   return (
     <section id="timeline" className="py-24 bg-white border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-gray-900 mb-4">
             Timeline.
@@ -60,7 +60,7 @@ const Timeline = () => {
 
             <div className="flex justify-between gap-8 relative z-10">
               {events.map((item, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}

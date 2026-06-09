@@ -10,19 +10,19 @@ const CustomScrollbar = () => {
   useEffect(() => {
     const checkScrollable = () => {
       setIsVisible(document.documentElement.scrollHeight > window.innerHeight);
-      // Subtract top/bottom padding (py-4 is 16px * 2 = 32px)
-      setSvgHeight(window.innerHeight - 32); 
+      // Reduce height to 70% of screen height
+      setSvgHeight(window.innerHeight * 0.7);
     };
-    
+
     checkScrollable();
     window.addEventListener('resize', checkScrollable);
-    
+
     // Automatically detect when page height changes
     const resizeObserver = new ResizeObserver(() => {
       checkScrollable();
     });
     resizeObserver.observe(document.body);
-    
+
     // If user refreshed while already scrolled down, reveal it immediately
     if (window.scrollY > 40) {
       setHasScrolled(true);
@@ -61,8 +61,8 @@ const CustomScrollbar = () => {
   `.replace(/\s+/g, ' ').trim();
 
   return (
-    <motion.div 
-      className="fixed top-0 right-2 w-6 h-screen z-[100] pointer-events-none py-4 flex justify-end"
+    <motion.div
+      className="hidden md:block fixed top-1/2 -translate-y-1/2 right-2 w-6 z-[100] pointer-events-none py-4 flex justify-end"
       initial={{ opacity: 0 }}
       animate={{ opacity: hasScrolled ? 1 : 0 }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
@@ -81,12 +81,12 @@ const CustomScrollbar = () => {
             <stop offset="66%" stopColor="#FBBC04" />
             <stop offset="100%" stopColor="#34A853" />
           </linearGradient>
-          
+
           <filter id="glow">
-            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feGaussianBlur stdDeviation="2" result="coloredBlur" />
             <feMerge>
-              <feMergeNode in="coloredBlur"/>
-              <feMergeNode in="SourceGraphic"/>
+              <feMergeNode in="coloredBlur" />
+              <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
         </defs>

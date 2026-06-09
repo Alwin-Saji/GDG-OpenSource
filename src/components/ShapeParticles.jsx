@@ -61,12 +61,19 @@ const ShapeParticlesInner = ({
   const { viewport } = useThree();
   const dummy = useMemo(() => new THREE.Object3D(), []);
 
+  const globalScale = Math.min(1, (viewport.width * 0.8) / 60);
+
   const targetPoints = useMemo(() => {
     const generateFn = shape === 'angle' ? generateAnglePoints : generateCurlyPoints;
     const leftPoints = generateFn(shapeCount / 2, 'left', width, height);
     const rightPoints = generateFn(shapeCount / 2, 'right', width, height);
-    return [...leftPoints, ...rightPoints];
-  }, [shapeCount, width, height, shape]);
+    
+    return [...leftPoints, ...rightPoints].map(p => {
+      p.x *= globalScale;
+      p.y *= globalScale;
+      return p;
+    });
+  }, [shapeCount, width, height, shape, globalScale]);
 
   const particles = useMemo(() => {
     const temp = [];
