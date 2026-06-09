@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import AntigravityParticles from '../components/AntigravityParticles';
+import ZeroGravityParticles from '../components/ZeroGravityParticles';
 
 const Hero = () => {
   const titleRef = useRef(null);
@@ -17,18 +17,13 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-[100dvh] flex items-center justify-center bg-white overflow-hidden">
-      {/* Antigravity Particle Animation */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <AntigravityParticles
-          particleCount={250}
-          speedFactor={0.4}
-          colors={['#4285F4', '#EA4335', '#FBBC04', '#34A853', '#5F6368', '#202124']}
-          gravity={-0.03}
-          usePattern={false}
-          interactionRadius={120}
-          friction={0.98}
-        />
-      </div>
+      {/* Zero Gravity Particle Animation */}
+      <ZeroGravityParticles 
+        particleCount={150}
+        minSize={1}
+        maxSize={3}
+        speedMultiplier={2}
+      />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center justify-center text-center pointer-events-none mt-4">
 
@@ -55,24 +50,13 @@ const Hero = () => {
           <h1 className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex justify-center pointer-events-auto px-2">
             <div 
               ref={titleRef}
-              className="relative cursor-none px-2 sm:px-4 py-2"
+              className="relative px-2 sm:px-4 py-2"
               onMouseMove={handleMouseMove}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
-              {/* Base Text (Solid Black) */}
+              {/* Text (Solid Black - No color change) */}
               <span className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl lg:text-[7.5rem] font-bold tracking-tight text-gray-900 block select-none">
-                Season of Code
-              </span>
-              
-              {/* Reveal Text (Gradient clipped by a circle) */}
-              <span 
-                className="absolute inset-0 px-2 sm:px-4 py-2 text-3xl xs:text-4xl sm:text-5xl md:text-7xl lg:text-[7.5rem] font-bold tracking-tight text-transparent bg-clip-text bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC04,#34A853)] block pointer-events-none transition-opacity duration-300 select-none"
-                style={{
-                  opacity: isHovered ? 1 : 0,
-                  clipPath: `circle(80px at ${mousePos.x}px ${mousePos.y}px)`
-                }}
-              >
                 Season of Code
               </span>
             </div>
