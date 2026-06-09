@@ -82,6 +82,16 @@ const Hero = () => {
           </h1>
         </div>
 
+        {/* Taglines */}
+        <div className="flex flex-col items-center gap-2 mb-6 sm:mb-8 pointer-events-none">
+          <p className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 tracking-tight">
+            Build. Contribute. Ship.
+          </p>
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 font-light tracking-wide">
+            Your first open source contribution starts here.
+          </p>
+        </div>
+
         {/* Minimal Animated Buttons v7 */}
         <div className="flex flex-col sm:flex-row items-center gap-8 pointer-events-auto mt-6">
           

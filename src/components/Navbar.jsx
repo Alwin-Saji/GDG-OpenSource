@@ -54,7 +54,7 @@ const Navbar = () => {
                 <span className="w-3 h-3 rounded-full bg-[#FBBC04] mix-blend-multiply shadow-sm transition-transform duration-300 group-hover:-translate-y-1"></span>
                 <span className="w-3 h-3 rounded-full bg-[#34A853] mix-blend-multiply shadow-sm transition-transform duration-300 group-hover:translate-y-1"></span>
               </div>
-              <span className="text-xl font-bold tracking-tight text-[#171717]">GDG.</span>
+              <span className="text-xl font-bold tracking-tight text-[#171717]">GDG on Campus CEC.</span>
             </Link>
 
             {/* Desktop Links with simple text transition */}

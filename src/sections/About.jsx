@@ -5,20 +5,20 @@ const About = () => {
   const features = [
     {
       icon: <MdAdsClick className="text-gray-400 group-hover:text-[#4285F4] transition-colors duration-300" size={24} />,
-      title: "Precision Targeting",
-      description: "Contribute to high-impact algorithms that solve real-world complexities. Your code directly powers the next generation of solutions.",
+      title: "🛠️ Hands-On Contribution",
+      description: "Pick real issues from curated open source projects, work directly with maintainers, and get your pull requests reviewed and merged into production codebases.",
       gradientClass: "group-hover:bg-gradient-to-r group-hover:from-[#4285F4] group-hover:to-[#EA4335]"
     },
     {
       icon: <MdGroups className="text-gray-400 group-hover:text-[#EA4335] transition-colors duration-300" size={24} />,
-      title: "Collective Intelligence",
-      description: "Interface with a diverse network of developers and mentors who are actively pushing the boundaries of open-source architecture.",
+      title: "🤝 Guided by Maintainers",
+      description: "Every project comes with a dedicated maintainer who knows the codebase inside out — they'll assign issues, review your PRs, and help you grow as a contributor.",
       gradientClass: "group-hover:bg-gradient-to-r group-hover:from-[#EA4335] group-hover:to-[#FBBC04]"
     },
     {
       icon: <MdBolt className="text-gray-400 group-hover:text-[#34A853] transition-colors duration-300" size={24} />,
-      title: "Velocity Acceleration",
-      description: "Exponentially increase your technical capabilities through high-velocity iteration and deep code reviews.",
+      title: "📈 Build Your GitHub Profile",
+      description: "Every merged PR is a permanent mark on your GitHub. Walk away from GDG Season of Code with real contributions, real experience, and a profile that speaks for itself.",
       gradientClass: "group-hover:bg-gradient-to-r group-hover:from-[#FBBC04] group-hover:to-[#34A853]"
     }
   ];
@@ -34,7 +34,7 @@ const About = () => {
             <span className="font-medium text-transparent bg-clip-text bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC04,#34A853)]">Contribute?</span>
           </h2>
           <p className="text-gray-500 text-base sm:text-lg font-light leading-relaxed">
-            An environment built for developers to dominate the open-source ecosystem. We engineer the bridge between raw potential and scalable contribution.
+            GDG Season of Code is a community-run open source program by GDG on Campus CEC, designed to break down the barrier between writing code and contributing to real-world projects. Beginner or experienced — you'll find a project that fits. Maintainers guide you, the community supports you, and your pull requests actually matter.
           </p>
         </div>
 
