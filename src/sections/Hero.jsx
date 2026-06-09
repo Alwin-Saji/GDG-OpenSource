@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import ZeroGravityParticles from '../components/ZeroGravityParticles';
+import Antigravity from '../components/Antigravity';
 
 const Hero = () => {
   const titleRef = useRef(null);

@@ -73,7 +73,7 @@ const Footer = () => {
                       <span className="text-sm font-medium text-black">Email</span>
                       <span className="text-sm text-gray-500 group-hover:text-black transition-colors">hello@gdg-opensource.com</span>
                     </div>
-                  </a> */}
+                  </a> 
                 </li>
                 <li>
                   <a href="https://maps.google.com/?q=College+of+Engineering+Chengannur" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 group">
@@ -93,7 +93,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="pt-6 sm:pt-8 border-t border-gray-100 flex flex-col-reverse sm:flex-row justify-between items-center gap-4 sm:gap-6">
           <p className="text-xs sm:text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} GDG CEC. All rights reserved.
+            &copy; {new Date().getFullYear()} GDG on Campus CEC. All rights reserved.
           </p>
           
           <div className="flex gap-5">
