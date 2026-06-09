@@ -33,44 +33,44 @@ const Hero = () => {
         />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center text-center pointer-events-none mt-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center justify-center text-center pointer-events-none mt-4">
 
-        <p className="text-[10px] sm:text-[11px] font-medium tracking-[0.25em] text-gray-900 uppercase mb-12">
+        <p className="text-[10px] sm:text-xs md:text-sm font-medium tracking-[0.2em] sm:tracking-[0.25em] text-gray-900 uppercase mb-8 sm:mb-12">
           Google Developer Groups Presents
         </p>
 
         {/* Layered Stroke Typography Title */}
-        <div className="relative mb-24 flex flex-col items-center justify-center w-full">
+        <div className="relative mb-16 sm:mb-20 md:mb-24 flex flex-col items-center justify-center w-full">
           {/* Background Gradient Outline Text */}
           <span
-            className="text-[8rem] sm:text-[12rem] md:text-[16rem] font-black tracking-tighter select-none leading-none opacity-60 bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC04,#34A853)]"
+            className="text-[5rem] xs:text-[6rem] sm:text-[8rem] md:text-[12rem] lg:text-[16rem] font-black tracking-tighter select-none leading-none opacity-60 bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC04,#34A853)]"
             style={{
               WebkitBackgroundClip: 'text',
               backgroundClip: 'text',
               WebkitTextFillColor: 'white',
-              WebkitTextStroke: '3px transparent'
+              WebkitTextStroke: '2px transparent'
             }}
           >
             GDG
           </span>
 
           {/* Spotlight Reveal Hover Text */}
-          <h1 className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex justify-center pointer-events-auto">
+          <h1 className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex justify-center pointer-events-auto px-2">
             <div 
               ref={titleRef}
-              className="relative cursor-none px-4 py-2"
+              className="relative cursor-none px-2 sm:px-4 py-2"
               onMouseMove={handleMouseMove}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
               {/* Base Text (Solid Black) */}
-              <span className="text-5xl sm:text-7xl md:text-[7.5rem] font-bold tracking-tight text-gray-900 block select-none">
+              <span className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl lg:text-[7.5rem] font-bold tracking-tight text-gray-900 block select-none">
                 Season of Code
               </span>
               
               {/* Reveal Text (Gradient clipped by a circle) */}
               <span 
-                className="absolute inset-0 px-4 py-2 text-5xl sm:text-7xl md:text-[7.5rem] font-bold tracking-tight text-transparent bg-clip-text bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC04,#34A853)] block pointer-events-none transition-opacity duration-300 select-none"
+                className="absolute inset-0 px-2 sm:px-4 py-2 text-3xl xs:text-4xl sm:text-5xl md:text-7xl lg:text-[7.5rem] font-bold tracking-tight text-transparent bg-clip-text bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC04,#34A853)] block pointer-events-none transition-opacity duration-300 select-none"
                 style={{
                   opacity: isHovered ? 1 : 0,
                   clipPath: `circle(80px at ${mousePos.x}px ${mousePos.y}px)`
