@@ -16,40 +16,27 @@ const AntigravityParticles = ({
   const spriteCacheRef = useRef({});
   const animationFrameRef = useRef(null);
 
-  // Pre-render shape sprites for GPU optimization
-  const getSprite = (color, shapeType) => {
-    const key = `${color}-${shapeType}`;
+  // Pre-render line/dash sprites for GPU optimization (Google Antigravity style)
+  const getSprite = (color, length) => {
+    const key = `${color}-${length}`;
     if (spriteCacheRef.current[key]) return spriteCacheRef.current[key];
 
-    const size = 64;
-    const center = size / 2;
-    const drawSize = 30;
     const c = document.createElement('canvas');
-    c.width = size;
-    c.height = size;
+    const width = length + 10; // Add padding
+    const height = 10;
+    c.width = width;
+    c.height = height;
     const cx = c.getContext('2d');
 
-    // Bake shadow
-    cx.shadowColor = 'rgba(0,0,0,0.08)';
-    cx.shadowBlur = 15;
-    cx.shadowOffsetX = 5;
-    cx.shadowOffsetY = 5;
-    cx.fillStyle = color;
-    cx.translate(center, center);
+    // Draw thin line/dash
+    cx.strokeStyle = color;
+    cx.lineWidth = 2;
+    cx.lineCap = 'round';
     cx.beginPath();
+    cx.moveTo(5, height / 2);
+    cx.lineTo(width - 5, height / 2);
+    cx.stroke();
 
-    if (shapeType === 0) { // Circle
-      cx.arc(0, 0, drawSize / 2, 0, Math.PI * 2);
-    } else if (shapeType === 1) { // Square
-      cx.rect(-drawSize / 2, -drawSize / 2, drawSize, drawSize);
-    } else if (shapeType === 2) { // Triangle
-      cx.moveTo(0, -drawSize / 2);
-      cx.lineTo(drawSize / 2, drawSize / 2);
-      cx.lineTo(-drawSize / 2, drawSize / 2);
-      cx.closePath();
-    }
-
-    cx.fill();
     spriteCacheRef.current[key] = c;
     return c;
   };
@@ -92,13 +79,16 @@ const AntigravityParticles = ({
       init(randomY = false) {
         this.x = Math.random() * width;
         this.y = randomY ? Math.random() * height : height + 50;
-        this.visualSize = Math.random() * 15 + 5;
-        this.vx = (Math.random() - 0.5) * 2 * speedFactor;
-        this.vy = (Math.random() - 0.5) * 2 * speedFactor;
+        
+        // Line length variation
+        this.lineLength = Math.random() * 15 + 8; // 8-23px lines
+        
+        this.vx = (Math.random() - 0.5) * 0.5 * speedFactor; // Slower, gentler movement
+        this.vy = (Math.random() - 0.5) * 0.5 * speedFactor;
 
         if (!usePattern) {
           if (gravity < 0) {
-            this.vy -= Math.random() * 1 * Math.abs(gravity);
+            this.vy -= Math.random() * 0.3 * Math.abs(gravity); // Gentler upward drift
           } else {
             this.y = randomY ? Math.random() * height : -50;
           }
@@ -108,19 +98,14 @@ const AntigravityParticles = ({
         }
 
         this.color = colors[Math.floor(Math.random() * colors.length)];
-        this.rotation = Math.random() * Math.PI * 2;
-        this.rotationSpeed = (Math.random() - 0.5) * 0.05;
-        this.type = this.getShapeType();
-        this.sprite = getSprite(this.color, this.type);
-        this.depth = Math.random() * 1 + 0.5;
+        this.rotation = Math.random() * Math.PI * 2; // Random angle for lines
+        this.rotationSpeed = (Math.random() - 0.5) * 0.01; // Very slow rotation
+        this.sprite = getSprite(this.color, this.lineLength);
+        this.depth = Math.random() * 0.5 + 0.5; // Less depth variation
+        this.opacity = 0.4 + Math.random() * 0.3; // Subtle opacity
       }
 
-      getShapeType() {
-        if (shape === 'circle') return 0;
-        if (shape === 'square') return 1;
-        if (shape === 'triangle') return 2;
-        return Math.floor(Math.random() * 3);
-      }
+
 
       getPatternTarget() {
         const cx = width / 2;
@@ -186,7 +171,7 @@ const AntigravityParticles = ({
         if (dist < interactionRadius) {
           const force = (interactionRadius - dist) / interactionRadius;
           const angle = Math.atan2(dy, dx);
-          const push = force * 4;
+          const push = force * 2; // Gentler push
           this.vx += Math.cos(angle) * push;
           this.vy += Math.sin(angle) * push;
         }
@@ -207,11 +192,16 @@ const AntigravityParticles = ({
 
       draw() {
         ctx.save();
+        ctx.globalAlpha = this.opacity;
         ctx.translate(this.x, this.y);
         ctx.rotate(this.rotation);
-        const scaleFactor = (this.visualSize * this.depth) / 30;
-        const renderSize = 64 * scaleFactor;
-        ctx.drawImage(this.sprite, -renderSize / 2, -renderSize / 2, renderSize, renderSize);
+        
+        // Scale the line based on depth
+        const scale = this.depth;
+        const renderWidth = (this.lineLength + 10) * scale;
+        const renderHeight = 10 * scale;
+        
+        ctx.drawImage(this.sprite, -renderWidth / 2, -renderHeight / 2, renderWidth, renderHeight);
         ctx.restore();
       }
     }

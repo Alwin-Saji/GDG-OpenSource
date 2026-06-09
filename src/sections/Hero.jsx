@@ -20,14 +20,13 @@ const Hero = () => {
       {/* Antigravity Particle Animation */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <AntigravityParticles
-          particleCount={60}
-          speedFactor={0.8}
-          colors={['#4285F4', '#EA4335', '#FBBC04', '#34A853']}
-          shape="mixed"
-          gravity={-0.08}
+          particleCount={120}
+          speedFactor={0.4}
+          colors={['#4285F4', '#EA4335', '#FBBC04', '#34A853', '#5F6368', '#202124']}
+          gravity={-0.03}
           usePattern={false}
-          interactionRadius={180}
-          friction={0.95}
+          interactionRadius={150}
+          friction={0.98}
         />
       </div>
 
