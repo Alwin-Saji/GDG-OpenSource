@@ -137,32 +137,32 @@ const Workflow = () => {
   }, []);
 
   return (
-    <section id="workflow" ref={sectionRef} className="py-32 bg-white relative overflow-hidden">
+    <section id="workflow" ref={sectionRef} className="py-16 sm:py-24 md:py-32 bg-white relative overflow-hidden">
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-32">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-16 sm:mb-24 md:mb-32">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-32"
+          className="text-center mb-16 sm:mb-24 md:mb-32"
         >
-          <h2 className="text-6xl md:text-7xl font-bold tracking-tighter text-gray-900 mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-gray-900 mb-4 sm:mb-6">
             How it works.
           </h2>
-          <p className="text-gray-500 text-xl max-w-2xl mx-auto">
+          <p className="text-gray-500 text-base sm:text-lg md:text-xl max-w-2xl mx-auto px-4">
             A seamless, vertical integration process designed to get your code into the core as quickly as possible.
           </p>
         </motion.div>
 
         <div className="relative py-10" ref={trackRef}>
           {/* Base Vertical Track */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-[3px] bg-gray-100 transform md:-translate-x-1/2 rounded-full overflow-hidden" />
+          <div className="absolute left-6 sm:left-8 md:left-1/2 top-0 bottom-0 w-[2px] sm:w-[3px] bg-gray-100 transform md:-translate-x-1/2 rounded-full overflow-hidden" />
 
           {/* Animated GSAP Vertical Fill */}
           <div
             ref={lineRef}
-            className="absolute left-8 md:left-1/2 top-0 w-[3px] bg-gradient-to-b from-[#4285F4] via-[#EA4335] via-[#FBBC04] to-[#34A853] transform md:-translate-x-1/2 rounded-full origin-top"
+            className="absolute left-6 sm:left-8 md:left-1/2 top-0 w-[2px] sm:w-[3px] bg-gradient-to-b from-[#4285F4] via-[#EA4335] via-[#FBBC04] to-[#34A853] transform md:-translate-x-1/2 rounded-full origin-top"
             style={{ height: "0%" }}
           />
 
@@ -177,9 +177,9 @@ const Workflow = () => {
                   {/* Timeline Dot (Smaller) */}
                   <div
                     ref={el => dotsRef.current[index] = el}
-                    className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white border-[2px] border-gray-100 rounded-full flex items-center justify-center shadow-sm z-20"
+                    className="absolute left-6 sm:left-8 md:left-1/2 transform -translate-x-1/2 w-10 h-10 sm:w-12 sm:h-12 bg-white border-[2px] border-gray-100 rounded-full flex items-center justify-center shadow-sm z-20"
                   >
-                    <span className={`text-sm font-black ${step.color}`}>{step.number}</span>
+                    <span className={`text-xs sm:text-sm font-black ${step.color}`}>{step.number}</span>
                   </div>
 
                   {/* Card Container */}
@@ -190,23 +190,23 @@ const Workflow = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, margin: "-100px" }}
                       transition={{ duration: 0.5, type: "spring", bounce: 0.3, delay: 0.1 }}
-                      className={`w-full md:w-[45%] pl-24 md:pl-0 ${isEven ? 'md:pr-16 text-left' : 'md:pl-16 text-left'}`}
+                      className={`w-full md:w-[45%] pl-20 sm:pl-24 md:pl-0 ${isEven ? 'md:pr-16 text-left' : 'md:pl-16 text-left'}`}
                     >
                       {/* Minimalist Card */}
-                      <div className="relative group py-4 transition-all border border-transparent hover:border-black px-4 rounded-xl duration-500 flex items-start gap-6 opacity-80 hover:opacity-100">
+                      <div className="relative group py-3 sm:py-4 transition-all border border-transparent hover:border-black px-3 sm:px-4 rounded-xl duration-500 flex items-start gap-4 sm:gap-6 opacity-80 hover:opacity-100">
 
                         <div className="shrink-0 mt-1">
-                          <Icon className={`w-5 h-5 ${step.color}`} />
+                          <Icon className={`w-4 h-4 sm:w-5 sm:h-5 ${step.color}`} />
                         </div>
 
                         <div>
-                          <div className="text-xs font-semibold tracking-wider text-gray-600 mb-2 uppercase">
+                          <div className="text-[10px] sm:text-xs font-semibold tracking-wider text-gray-600 mb-2 uppercase">
                             Phase {step.number}
                           </div>
-                          <h3 className="text-lg font-medium text-gray-900 mb-2 tracking-tight">
+                          <h3 className="text-base sm:text-lg font-medium text-gray-900 mb-2 tracking-tight">
                             {step.title}
                           </h3>
-                          <p className="text-gray-900 text-sm leading-relaxed max-w-sm">
+                          <p className="text-gray-900 text-xs sm:text-sm leading-relaxed max-w-sm">
                             {step.description}
                           </p>
                         </div>
@@ -223,12 +223,12 @@ const Workflow = () => {
       </div>
 
       {/* Timeline Section integrated here */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 border-t border-gray-100">
-        <div className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-gray-900 mb-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 md:pt-24 border-t border-gray-100">
+        <div className="mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-gray-900 mb-3 sm:mb-4">
             Timeline.
           </h2>
-          <p className="text-gray-500 text-lg font-medium">
+          <p className="text-gray-500 text-base sm:text-lg font-medium">
             The schedule for the open source contribution period.
           </p>
         </div>

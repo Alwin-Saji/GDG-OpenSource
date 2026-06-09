@@ -81,30 +81,30 @@ const ProjectCard = ({ project }) => {
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } }
       }}
-      className="group relative flex flex-col md:flex-row items-start md:items-center justify-between p-6 md:p-8 bg-white border border-transparent  hover:border-gray-900 rounded-2xl transition-all duration-300"
+      className="group relative flex flex-col md:flex-row items-start md:items-center justify-between p-4 sm:p-6 md:p-8 bg-white border border-transparent hover:border-gray-900 rounded-2xl transition-all duration-300"
     >
       {/* Color accent line on the left */}
-      <div className={`absolute left-0 top-6 bottom-6 w-1 rounded-r-md ${project.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
+      <div className={`absolute left-0 top-4 sm:top-6 bottom-4 sm:bottom-6 w-1 rounded-r-md ${project.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
 
-      <div className="flex-1 pr-0 md:pr-12">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mb-3 gap-2 sm:gap-0">
-          <h3 className="text-2xl font-semibold text-gray-900 tracking-tight">
+      <div className="flex-1 pr-0 md:pr-8 lg:pr-12">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 sm:space-x-4 mb-3 gap-2 sm:gap-0">
+          <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 tracking-tight">
             {project.name}
           </h3>
-          <div className="flex items-center space-x-3 text-xs font-medium text-gray-500 bg-gray-50 px-3 py-1.5 rounded-md border border-gray-100 w-fit">
-            <span className="flex items-center"><FaStar className="mr-1.5 text-gray-400 group-hover:text-yellow-400 transition-colors duration-300" /> {stats.stars}</span>
+          <div className="flex items-center space-x-2 sm:space-x-3 text-xs font-medium text-gray-500 bg-gray-50 px-3 py-1.5 rounded-md border border-gray-100 w-fit">
+            <span className="flex items-center"><FaStar className="mr-1 sm:mr-1.5 text-gray-400 group-hover:text-yellow-400 transition-colors duration-300" size={12} /> {stats.stars}</span>
             <span className="w-px h-3 bg-gray-300"></span>
-            <span className="flex items-center"><FaCodeBranch className="mr-1.5 text-gray-400 group-hover:text-blue-500 transition-colors duration-300" /> {stats.forks}</span>
+            <span className="flex items-center"><FaCodeBranch className="mr-1 sm:mr-1.5 text-gray-400 group-hover:text-blue-500 transition-colors duration-300" size={12} /> {stats.forks}</span>
           </div>
         </div>
 
-        <p className="text-gray-600 mb-6 font-light leading-relaxed max-w-3xl">
+        <p className="text-gray-600 mb-4 sm:mb-6 font-light leading-relaxed max-w-3xl text-sm sm:text-base">
           {project.description}
         </p>
 
-        <div className="flex flex-wrap gap-2 mb-6 md:mb-0">
+        <div className="flex flex-wrap gap-2 mb-4 sm:mb-6 md:mb-0">
           {project.tags.map(tag => (
-            <span key={tag} className="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-md">
+            <span key={tag} className="px-2.5 sm:px-3 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-md">
               {tag}
             </span>
           ))}
@@ -116,11 +116,10 @@ const ProjectCard = ({ project }) => {
           href={project.githubUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center w-full md:w-auto px-6 py-3.5 bg-white hover:bg-gray-900 text-gray-900 hover:text-white border border-gray-200 hover:border-gray-900 rounded-xl transition-all duration-300 font-medium group/btn shadow-sm hover:shadow-xl hover:shadow-gray-900/20"
-        >
-          <FaGithub className="mr-2" size={18} />
+          className="inline-flex items-center justify-center w-full md:w-auto px-5 sm:px-6 py-3 sm:py-3.5 bg-white hover:bg-gray-900 text-gray-900 hover:text-white border border-gray-200 hover:border-gray-900 rounded-xl transition-all duration-300 font-medium group/btn shadow-sm hover:shadow-xl hover:shadow-gray-900/20 text-sm sm:text-base">
+          <FaGithub className="mr-2" size={16} />
           View Source
-          <MdArrowForward className="ml-2 opacity-0 -translate-x-2 group-hover/btn:opacity-100 group-hover/btn:translate-x-0 transition-all duration-300" size={18} />
+          <MdArrowForward className="ml-2 opacity-0 -translate-x-2 group-hover/btn:opacity-100 group-hover/btn:translate-x-0 transition-all duration-300" size={16} />
         </a>
       </div>
     </motion.div>
@@ -129,26 +128,26 @@ const ProjectCard = ({ project }) => {
 
 const Projects = () => {
   return (
-    <div className="min-h-screen pt-32 pb-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto selection:bg-gray-900 selection:text-white">
+    <div className="min-h-screen pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto selection:bg-gray-900 selection:text-white">
 
       {/* Header Section */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 sm:mb-16 gap-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
           className="max-w-2xl"
         >
-          <div className="flex items-center space-x-3 mb-6">
+          <div className="flex items-center space-x-3 mb-4 sm:mb-6">
             <div className="p-2 bg-gray-100 rounded-lg">
-              <FaRegFolderOpen className="text-gray-700" size={24} />
+              <FaRegFolderOpen className="text-gray-700" size={20} />
             </div>
-            <span className="text-sm font-semibold tracking-widest text-gray-500 uppercase">Directory</span>
+            <span className="text-xs sm:text-sm font-semibold tracking-widest text-gray-500 uppercase">Directory</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-[#171717] mb-6 tracking-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] mb-4 sm:mb-6 tracking-tight">
             Projects & Initiatives
           </h1>
-          <p className="text-lg text-gray-500 font-light leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-500 font-light leading-relaxed">
             Explore the open-source projects we are currently building. Dive into the codebase, suggest improvements, and collaborate with the community.
           </p>
         </motion.div>
@@ -159,8 +158,8 @@ const Projects = () => {
           transition={{ delay: 0.3, duration: 0.5 }}
           className="hidden md:block text-right"
         >
-          <p className="text-sm font-medium text-gray-400 uppercase tracking-widest mb-1">Total Repositories</p>
-          <p className="text-3xl font-bold text-gray-900">{projects.length}</p>
+          <p className="text-xs sm:text-sm font-medium text-gray-400 uppercase tracking-widest mb-1">Total Repositories</p>
+          <p className="text-2xl sm:text-3xl font-bold text-gray-900">{projects.length}</p>
         </motion.div>
       </div>
 
