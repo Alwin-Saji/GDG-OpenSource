@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import FloatingShapes from '../components/FloatingShapes';
+import AntigravityParticles from '../components/AntigravityParticles';
 
 const Hero = () => {
   const titleRef = useRef(null);
@@ -17,9 +17,18 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-[100dvh] flex items-center justify-center bg-white overflow-hidden">
-      {/* Weightless floating geometric shapes */}
+      {/* Antigravity Particle Animation */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <FloatingShapes />
+        <AntigravityParticles
+          particleCount={60}
+          speedFactor={0.8}
+          colors={['#4285F4', '#EA4335', '#FBBC04', '#34A853']}
+          shape="mixed"
+          gravity={-0.08}
+          usePattern={false}
+          interactionRadius={180}
+          friction={0.95}
+        />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center justify-center text-center pointer-events-none mt-4">
