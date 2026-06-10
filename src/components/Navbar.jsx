@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MdMenu, MdClose } from 'react-icons/md';
 import { Link } from 'react-router-dom';
+import gdgLogo from '../assets/gdg-logo.svg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,17 +49,11 @@ const Navbar = () => {
 
             {/* Logo with playful hover */}
             <Link to="/" onClick={scrollToTop} className="flex items-center space-x-2.5 group cursor-pointer">
-              <div className="transition-transform duration-300 group-hover:scale-110">
-                <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {/* Left bracket - Blue (bottom) and Red (top) */}
-                  <rect x="8" y="50" width="28" height="38" rx="14" fill="#4285F4" stroke="#1a1a1a" strokeWidth="3"/>
-                  <rect x="8" y="12" width="28" height="38" rx="14" fill="#EA4335" stroke="#1a1a1a" strokeWidth="3"/>
-                  
-                  {/* Right bracket - Green (top) and Yellow (bottom) */}
-                  <rect x="64" y="12" width="28" height="38" rx="14" fill="#34A853" stroke="#1a1a1a" strokeWidth="3"/>
-                  <rect x="64" y="50" width="28" height="38" rx="14" fill="#FBBC04" stroke="#1a1a1a" strokeWidth="3"/>
-                </svg>
-              </div>
+              <img 
+                src={gdgLogo} 
+                alt="GDG Logo" 
+                className="w-10 h-10 transition-transform duration-300 group-hover:scale-110"
+              />
               <div className="flex flex-col -space-y-1">
                 <span className="text-base font-semibold tracking-tight text-[#171717]">Google Developers Group</span>
                 <span className="text-sm font-medium tracking-tight text-[#4285F4]">College of Engineering Chengannur</span>
