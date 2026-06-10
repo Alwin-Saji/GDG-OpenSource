@@ -85,7 +85,7 @@ const Hero = () => {
         {/* Taglines */}
         <div className="flex flex-col items-center gap-2 mb-6 sm:mb-8 pointer-events-none">
           <p className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 tracking-tight">
-            Build. Contribute. Ship.
+            Write code that matters
           </p>
           <p className="text-sm sm:text-base md:text-lg text-gray-600 font-light tracking-wide">
             Your first open source contribution starts here.
