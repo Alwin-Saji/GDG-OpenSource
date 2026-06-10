@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import FloatingElements from './components/FloatingElements';
 import CustomScrollbar from './components/CustomScrollbar';
 import Loader from './components/Loader';
+import { ThemeProvider } from './components/ThemeContext';
 
 // Pages
 import Home from './pages/Home';
@@ -24,24 +25,26 @@ function App() {
   }, []);
 
   return (
-    <div className={`relative min-h-screen overflow-x-hidden selection:bg-blue-500/30 ${isLoading ? 'h-screen overflow-hidden' : ''}`}>
-      <AnimatePresence mode="wait">
-        {isLoading && <Loader key="loader" />}
-      </AnimatePresence>
-      
-      {!isLoading && <CustomScrollbar />}
-      <FloatingElements />
-      <Navbar />
-      
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contributor-guidelines" element={<ContributorGuidelines />} />
-        <Route path="/maintainer-guidelines" element={<MaintainerGuidelines />} />
-      </Routes>
+    <ThemeProvider>
+      <div className={`relative min-h-screen overflow-x-hidden selection:bg-blue-500/30 dark:selection:bg-blue-500/50 ${isLoading ? 'h-screen overflow-hidden' : ''}`}>
+        <AnimatePresence mode="wait">
+          {isLoading && <Loader key="loader" />}
+        </AnimatePresence>
+        
+        {!isLoading && <CustomScrollbar />}
+        <FloatingElements />
+        <Navbar />
+        
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contributor-guidelines" element={<ContributorGuidelines />} />
+          <Route path="/maintainer-guidelines" element={<MaintainerGuidelines />} />
+        </Routes>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 

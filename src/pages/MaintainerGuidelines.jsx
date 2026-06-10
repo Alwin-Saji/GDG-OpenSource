@@ -27,12 +27,12 @@ const MaintainerGuidelines = () => {
       content: (
         <>
           <p className="mb-4">When reviewing PRs, strive to be constructive and empathetic. Point out improvements clearly and explain *why* a change is needed.</p>
-          <div className="pl-6 border-l-2 border-gray-100 my-8 py-2">
+          <div className="pl-6 border-l-2 border-gray-100 dark:border-white/10 my-8 py-2">
             <p className="text-gray-400 text-xs font-medium mb-2 uppercase tracking-widest">Instead of</p>
-            <p className="font-mono text-sm text-gray-800 mb-6 bg-gray-50 p-3 rounded-md">"This is wrong. Use a switch statement."</p>
+            <p className="font-mono text-sm text-gray-800 dark:text-gray-300 mb-6 bg-gray-50 dark:bg-white/5 p-3 rounded-md">"This is wrong. Use a switch statement."</p>
             
             <p className="text-[#4285F4] text-xs font-medium mb-2 uppercase tracking-widest">Try saying</p>
-            <p className="font-mono text-sm text-gray-800 bg-[#4285F4]/5 border border-[#4285F4]/10 p-3 rounded-md">"Thanks for this! I noticed we have a few nested conditionals here. What do you think about using a switch statement to make it a bit more readable?"</p>
+            <p className="font-mono text-sm text-gray-800 dark:text-gray-300 bg-[#4285F4]/5 border border-[#4285F4]/10 p-3 rounded-md">"Thanks for this! I noticed we have a few nested conditionals here. What do you think about using a switch statement to make it a bit more readable?"</p>
           </div>
           <p>Always thank the contributor for their effort, regardless of whether the PR is accepted.</p>
         </>
@@ -52,7 +52,7 @@ const MaintainerGuidelines = () => {
   ];
 
   return (
-    <main className="min-h-screen pt-28 md:pt-40 pb-20 md:pb-32 bg-white selection:bg-gray-100 selection:text-black">
+    <main className="min-h-screen pt-28 md:pt-40 pb-20 md:pb-32 bg-white dark:bg-black selection:bg-gray-100 dark:selection:bg-white/10 selection:text-black dark:selection:text-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <motion.div 
@@ -61,10 +61,10 @@ const MaintainerGuidelines = () => {
           transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
           className="mb-20 md:mb-32"
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tighter text-gray-900 mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tighter text-gray-900 dark:text-white mb-6">
             Maintainer Manual.
           </h1>
-          <p className="text-lg md:text-xl text-gray-500 font-light max-w-xl leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-500 dark:text-gray-400 font-light max-w-xl leading-relaxed">
             Principles, practices, and expectations for the stewards of our open-source ecosystem.
           </p>
         </motion.div>
@@ -77,11 +77,11 @@ const MaintainerGuidelines = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: index * 0.1, ease: [0.32, 0.72, 0, 1] }}
-              className="border-t border-gray-100 pt-8 group"
+              className="border-t border-gray-100 dark:border-white/10 pt-8 group"
             >
               <div className="flex flex-col md:flex-row md:gap-16">
                 <div className="md:w-1/3 mb-6 md:mb-0">
-                  <h2 className="text-2xl font-medium text-gray-900 tracking-tight flex items-center gap-3">
+                  <h2 className="text-2xl font-medium text-gray-900 dark:text-white tracking-tight flex items-center gap-3">
                     <span 
                       className="w-1.5 h-1.5 rounded-full transition-transform duration-300 group-hover:scale-150" 
                       style={{ backgroundColor: section.color }} 
@@ -89,7 +89,7 @@ const MaintainerGuidelines = () => {
                     {section.title}
                   </h2>
                 </div>
-                <div className="md:w-2/3 text-gray-500 font-light text-sm md:text-lg leading-relaxed pl-5">
+                <div className="md:w-2/3 text-gray-500 dark:text-gray-400 font-light text-sm md:text-lg leading-relaxed pl-5">
                   {section.content}
                 </div>
               </div>

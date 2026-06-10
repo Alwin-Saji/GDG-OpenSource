@@ -30,16 +30,16 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="min-h-[100dvh] lg:h-screen flex items-center justify-center py-16 bg-white overflow-hidden">
+    <section id="about" className="min-h-[100dvh] lg:h-screen flex items-center justify-center py-16 bg-white dark:bg-black overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 w-full">
 
         {/* Header */}
         <div className="mb-12 lg:mb-20 flex flex-col md:flex-row items-center md:items-end justify-between gap-6 lg:gap-8 text-center md:text-left">
-          <h2 className="text-4xl md:text-5xl lg:text-7xl font-light text-gray-900 tracking-tighter leading-tight md:leading-none">
+          <h2 className="text-4xl md:text-5xl lg:text-7xl font-light text-gray-900 dark:text-white tracking-tighter leading-tight md:leading-none">
             Why <br className="hidden md:block" />
             <span className="font-medium text-transparent bg-clip-text bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC04,#34A853)]">Contribute?</span>
           </h2>
-          <p className="text-gray-500 text-lg md:text-base lg:text-lg font-light max-w-md leading-relaxed pb-1 md:pb-2">
+          <p className="text-gray-500 dark:text-gray-400 text-lg md:text-base lg:text-lg font-light max-w-md leading-relaxed pb-1 md:pb-2">
             An environment built for developers to dominate the open-source ecosystem. We engineer the bridge between raw potential and scalable contribution.
           </p>
         </div>
@@ -55,7 +55,7 @@ const About = () => {
               {/* <div className={`h-[2px] w-full bg-gray-100 mb-6 lg:mb-8 transition-colors duration-500 ${feature.borderColor}`}></div> */}
 
               <div className="flex items-center justify-between mb-4">
-                <h3 className={`text-lg md:text-lg lg:text-xl font-medium text-gray-900 tracking-tight transition-colors duration-300 ${feature.textColor}`}>
+                <h3 className={`text-lg md:text-lg lg:text-xl font-medium text-gray-900 dark:text-white tracking-tight transition-colors duration-300 ${feature.textColor}`}>
                   {feature.title}
                 </h3>
                 <div className="transform group-hover:-translate-y-1 transition-transform duration-300">
@@ -63,7 +63,7 @@ const About = () => {
                 </div>
               </div>
 
-              <p className="text-gray-500 text-[14px] md:text-sm lg:text-base font-light leading-relaxed">
+              <p className="text-gray-500 dark:text-gray-400 text-[14px] md:text-sm lg:text-base font-light leading-relaxed">
                 {feature.description}
               </p>
             </div>

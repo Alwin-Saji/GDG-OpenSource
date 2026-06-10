@@ -37,31 +37,31 @@ const Faq = () => {
   };
 
   return (
-    <section id="faq" className="py-16 md:py-32 bg-white relative">
+    <section id="faq" className="py-16 md:py-32 bg-white dark:bg-black relative">
       <div className="w-[80vw] md:w-full max-w-3xl mx-auto md:px-6 lg:px-8">
         
         <div className="mb-10 md:mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white tracking-tight">
             FAQ
           </h2>
         </div>
 
-        <div className="border-t border-gray-200">
+        <div className="border-t border-gray-200 dark:border-white/10">
           {faqData.map((faq, index) => {
             const isOpen = openIndex === index;
             
             return (
               <div 
                 key={index} 
-                className="border-b border-gray-200 group"
+                className="border-b border-gray-200 dark:border-white/10 group"
               >
                 <button
                   onClick={() => toggleFaq(index)}
                   className="w-full py-6 md:py-8 flex items-center justify-between text-left focus:outline-none"
                 >
                   <span 
-                    className="text-md md:text-2xl font-light transition-colors duration-500"
-                    style={{ color: isOpen ? faq.color : '#111827' }}
+                    className={`text-md md:text-2xl font-light transition-colors duration-500 ${isOpen ? '' : 'text-[#111827] dark:text-white'}`}
+                    style={{ color: isOpen ? faq.color : undefined }}
                   >
                     {faq.question}
                   </span>
@@ -99,7 +99,7 @@ const Faq = () => {
                       }}
                       className="overflow-hidden"
                     >
-                      <div className="pb-6 md:pb-8 text-gray-500 font-light text-sm md:text-lg leading-relaxed pr-6 md:pr-12">
+                      <div className="pb-6 md:pb-8 text-gray-500 dark:text-gray-400 font-light text-sm md:text-lg leading-relaxed pr-6 md:pr-12">
                         {faq.answer}
                       </div>
                     </motion.div>

@@ -41,14 +41,14 @@ const Timeline = () => {
   ];
 
   return (
-    <section id="timeline" className="py-16 sm:py-20 md:py-24 bg-white border-t border-gray-100">
+    <section id="timeline" className="py-16 sm:py-20 md:py-24 bg-white dark:bg-black border-t border-gray-100 dark:border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-gray-900 dark:text-white mb-4">
             Timeline.
           </h2>
-          <p className="text-gray-500 text-base sm:text-lg font-medium">
+          <p className="text-gray-500 dark:text-gray-400 text-base sm:text-lg font-medium">
             The schedule for the open source contribution period.
           </p>
         </div>
@@ -56,7 +56,7 @@ const Timeline = () => {
         <div className="relative overflow-x-auto pb-8 hide-scrollbar">
           <div className="min-w-[700px] sm:min-w-[900px] relative pt-6">
             {/* Horizontal Track */}
-            <div className="absolute top-[31px] left-0 right-0 h-[2px] bg-gray-100 rounded-full"></div>
+            <div className="absolute top-[31px] left-0 right-0 h-[2px] bg-gray-100 dark:bg-white/10 rounded-full"></div>
 
             <div className="flex justify-between gap-4 sm:gap-6 md:gap-8 relative z-10">
               {events.map((item, index) => (
@@ -69,17 +69,17 @@ const Timeline = () => {
                   className="flex-1 min-w-[140px] sm:min-w-[160px] relative group"
                 >
                   {/* Node Dot */}
-                  <div className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full border-2 border-white shadow-sm mb-4 sm:mb-6 ${item.color} relative z-10 transition-transform duration-300 group-hover:scale-125`}></div>
+                  <div className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full border-2 border-white dark:border-black shadow-sm mb-4 sm:mb-6 ${item.color} relative z-10 transition-transform duration-300 group-hover:scale-125`}></div>
 
                   {/* Content */}
                   <div className="pr-2 sm:pr-4">
-                    <div className="text-xs sm:text-sm font-bold tracking-wider text-gray-400 mb-1.5 sm:mb-2 uppercase">
+                    <div className="text-xs sm:text-sm font-bold tracking-wider text-gray-400 dark:text-gray-500 mb-1.5 sm:mb-2 uppercase">
                       {item.date}
                     </div>
-                    <h3 className={`text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-1.5 sm:mb-2 leading-tight transition-all duration-300 ${item.clip}`}>
+                    <h3 className={`text-base sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-1.5 sm:mb-2 leading-tight transition-all duration-300 ${item.clip}`}>
                       {item.event}
                     </h3>
-                    <p className="text-gray-500 text-xs sm:text-sm font-medium leading-relaxed">
+                    <p className="text-gray-500 dark:text-gray-400 text-xs sm:text-sm font-medium leading-relaxed">
                       {item.description}
                     </p>
                   </div>
