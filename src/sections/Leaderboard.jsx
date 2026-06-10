@@ -23,7 +23,7 @@ const Leaderboard = () => {
           </div>
         </div>
         
-        <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm overflow-x-auto">
+        <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm overflow-x-auto">
           <table className="w-full text-left border-collapse min-w-[600px]">
             <thead>
               <tr className="border-b border-gray-200 bg-gray-50">

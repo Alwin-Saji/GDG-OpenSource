@@ -4,9 +4,9 @@ import { FaGithub } from 'react-icons/fa';
 
 const Register = () => {
   return (
-    <section id="register" className="py-16 sm:py-20 md:py-24 bg-gray-50">
+    <section id="register" className="py-16 sm:py-20 md:py-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white border border-gray-200 rounded-3xl p-8 sm:p-12 md:p-16 lg:p-20 text-center shadow-sm">
+        <div className="border border-gray-200 rounded-3xl p-8 sm:p-12 md:p-16 lg:p-20 text-center shadow-sm">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-black tracking-tight mb-4 sm:mb-6">
             Ready to Build?
           </h2>

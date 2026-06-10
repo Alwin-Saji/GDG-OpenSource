@@ -7,16 +7,23 @@ import Leaderboard from '../sections/Leaderboard';
 import Faq from '../sections/Faq';
 
 import GuidelinesLinks from '../sections/GuidelinesLinks';
+import SectionDivider from '../components/SectionDivider';
 
 const Home = () => {
   return (
-    <main className="relative z-10">
+    <main className="relative z-10 overflow-hidden">
       <Hero />
+      <SectionDivider />
       <About />
+      <SectionDivider />
       <Workflow />
+      <SectionDivider />
       <Maintainers />
-      <Leaderboard />
+      <SectionDivider />
+      {/* <Leaderboard /> */}
+      {/* <SectionDivider /> */}
       <Faq />
+      <SectionDivider />
       <GuidelinesLinks />
     </main>
   );

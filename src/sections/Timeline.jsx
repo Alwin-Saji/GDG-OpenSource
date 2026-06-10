@@ -41,7 +41,7 @@ const Timeline = () => {
   ];
 
   return (
-    <section id="timeline" className="py-16 sm:py-20 md:py-24 bg-white border-t border-gray-100">
+    <section id="timeline" className="py-16 sm:py-20 md:py-24 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="mb-16">

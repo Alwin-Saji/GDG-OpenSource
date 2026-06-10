@@ -25,6 +25,13 @@ function App() {
 
   return (
     <div className={`relative min-h-screen overflow-x-hidden selection:bg-blue-500/30 ${isLoading ? 'h-screen overflow-hidden' : ''}`}>
+      {/* Global Background Grid */}
+      <div className="fixed inset-0 z-[0] pointer-events-none opacity-20"
+           style={{
+             backgroundImage: 'linear-gradient(#300000 1px, transparent 1px), linear-gradient(90deg, #300000 1px, transparent 1px)',
+             backgroundSize: '40px 40px'
+           }}>
+      </div>
       <AnimatePresence mode="wait">
         {isLoading && <Loader key="loader" />}
       </AnimatePresence>

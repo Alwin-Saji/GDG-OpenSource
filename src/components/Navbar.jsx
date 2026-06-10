@@ -44,7 +44,7 @@ const Navbar = () => {
   return (
     <div className="fixed top-0 left-0 w-full z-50 flex justify-center pointer-events-none">
       <div className={`pointer-events-auto relative w-full transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled ? 'max-w-4xl pt-6 px-4' : 'max-w-full pt-0 px-0'}`}>
-        <nav className={`mx-auto transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled ? 'bg-white/80 backdrop-blur-xl border border-gray-200/50 shadow-xl shadow-black/5 rounded-full px-6 py-2.5' : 'bg-transparent border border-transparent px-6 sm:px-8 lg:px-12 py-5'}`}>
+        <nav className={`mx-auto transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled ? 'bg-[#5A0F15]/80 backdrop-blur-xl border border-[#5A0F15]/50 shadow-xl shadow-black/5 rounded-full px-6 py-2.5' : 'bg-transparent border border-transparent px-6 sm:px-8 lg:px-12 py-5'}`}>
           <div className="flex items-center justify-between">
 
             {/* Logo with playful hover */}
@@ -55,8 +55,12 @@ const Navbar = () => {
                 className="w-10 h-10 transition-transform duration-300 group-hover:scale-110"
               />
               <div className="flex flex-col -space-y-1">
-                <span className="text-base font-semibold tracking-tight text-[#171717]">Google Developers Group</span>
-                <span className="text-sm font-medium tracking-tight text-[#4285F4]">College of Engineering Chengannur</span>
+                <span className="text-base font-semibold tracking-tight text-white">
+                  {scrolled ? 'GDG' : 'Google Developers Group'}
+                </span>
+                <span className="text-sm font-medium tracking-tight text-[#77a5ee]">
+                  {scrolled ? 'CEC' : 'College of Engineering Chengannur'}
+                </span>
               </div>
             </Link>
 
@@ -65,13 +69,13 @@ const Navbar = () => {
               <Link
                 to="/"
                 onClick={scrollToTop}
-                className="px-4 py-2 text-sm font-medium text-gray-500 hover:text-[#171717] transition-all duration-300"
+                className="px-4 py-2 text-sm font-medium text-white/60 hover:text-white transition-all duration-300"
               >
                 Home
               </Link>
               <Link
                 to="/projects"
-                className="px-4 py-2 text-sm font-medium text-gray-500 hover:text-[#171717] transition-all duration-300"
+                className="px-4 py-2 text-sm font-medium text-white/60 hover:text-white transition-all duration-300"
               >
                 Projects
               </Link>
@@ -79,7 +83,7 @@ const Navbar = () => {
                 <a
                   key={item}
                   href={`/#${item.toLowerCase()}`}
-                  className="px-4 py-2 text-sm font-medium text-gray-500 hover:text-[#171717] transition-all duration-300"
+                  className="px-4 py-2 text-sm font-medium text-white/60 hover:text-white transition-all duration-300"
                 >
                   {item}
                 </a>
@@ -87,16 +91,16 @@ const Navbar = () => {
 
               {/* Resources Dropdown */}
               <div className="relative group">
-                <button className="px-4 py-2 text-sm font-medium text-gray-500 hover:text-[#171717] transition-all duration-300 flex items-center gap-1 outline-none">
+                <button className="px-4 py-2 text-sm font-medium text-white/60 hover:text-white transition-all duration-300 flex items-center gap-1 outline-none">
                   Resources
                   <svg className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className="absolute top-full right-0 mt-2 w-56 bg-white border border-gray-100 rounded-lg shadow-lg shadow-black/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <div className="absolute top-full right-0 mt-2 w-56 bg-[#4A0A0F] border border-[#4A0A0F] rounded-lg shadow-lg shadow-black/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <div className="py-2">
-                    <Link to="/contributor-guidelines" className="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-black transition-colors">Contributor Guidelines</Link>
-                    <Link to="/maintainer-guidelines" className="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-black transition-colors">Maintainer Guidelines</Link>
+                    <Link to="/contributor-guidelines" className="block px-4 py-2.5 text-sm text-white/90 hover:bg-gray-50 hover:text-black transition-colors">Contributor Guidelines</Link>
+                    <Link to="/maintainer-guidelines" className="block px-4 py-2.5 text-sm text-white/90 hover:bg-gray-50 hover:text-black transition-colors">Maintainer Guidelines</Link>
                     {/* <a href="#" className="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-black transition-colors">Documentation</a>
                     <a href="#" className="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-black transition-colors">API Reference</a> */}
                   </div>
@@ -106,7 +110,7 @@ const Navbar = () => {
 
             {/* Action Button with scale & shadow hover */}
             <div className="hidden md:block">
-              <a href="/#register" className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium text-white bg-[#171717] rounded-full overflow-hidden shadow-md shadow-black/10 hover:shadow-lg hover:shadow-black/20 hover:bg-black transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0">
+              <a href="/#register" className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium text-black bg-white rounded-full overflow-hidden shadow-md shadow-black/10 hover:shadow-lg hover:shadow-black/20 hover:bg-black hover:text-white transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0">
                 Register
               </a>
             </div>

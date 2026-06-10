@@ -1,119 +1,111 @@
-import React, { useRef, useState } from 'react';
-import Antigravity from '../components/Antigravity';
+import DotText from '../components/DotText';
 
 const Hero = () => {
-  const titleRef = useRef(null);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseMove = (e) => {
-    if (!titleRef.current) return;
-    const rect = titleRef.current.getBoundingClientRect();
-    setMousePos({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-    });
-  };
-
   return (
-    <section className="relative min-h-[100dvh] flex items-center justify-center bg-white overflow-hidden pt-20 pb-16">
-      {/* Whisper-quiet background effect */}
-      <div className="absolute inset-0 z-0 pointer-events-auto">
-        <Antigravity
-          count={400}
-          magnetRadius={2}
-          ringRadius={6}
-          waveSpeed={0.2}
-          waveAmplitude={2}
-          particleSize={0.5}
-          lerpSpeed={0.02}
-          color={'#4285F4'}
-          autoAnimate={true}
-          particleVariance={0.5}
-        />
+    <section className="relative min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden pt-20 pb-16 font-sans">
+      {/* Background Graphic Elements */}
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-20 flex justify-center items-center overflow-hidden">
+
+
+        {/* Faint Code Snippet 1 */}
+        <div className="absolute top-24 left-10 text-[#300000] font-mono text-sm sm:text-base opacity-40 transform -rotate-6">
+          <pre>
+{`function solve(problem){
+  let idea = think();
+  let code = build(idea);
+  return improve(code);
+}`}
+          </pre>
+        </div>
+
+        {/* Faint Code Snippet 2 */}
+        <div className="absolute bottom-32 right-10 text-[#300000] font-mono text-sm sm:text-base opacity-40 transform rotate-3">
+          <pre>
+{`while (curious){
+  learn();
+  build();
+  repeat();
+}`}
+          </pre>
+        </div>
+        
+        {/* Gear Icon (SVG) */}
+        <div className="absolute top-32 right-16 text-[#300000] opacity-40 w-32 h-32">
+          <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+          </svg>
+        </div>
+
+        {/* Big Gear Left */}
+        <div className="absolute bottom-24 left-[-2rem] text-[#300000] opacity-40 w-48 h-48">
+          <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+          </svg>
+        </div>
+
+        {/* Code Icon Center Bottom */}
+        <div className="absolute bottom-[20%] left-1/2 -translate-x-1/2 text-[#300000] opacity-40 w-24 h-24 transform -rotate-12">
+          <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          </svg>
+        </div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center justify-center text-center pointer-events-none mt-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-16 relative z-10 flex flex-col items-center text-center">
 
-        <p className="text-[10px] sm:text-[11px] font-medium tracking-[0.25em] text-gray-900 uppercase mb-12">
-          Google Developer Groups on Campus Presents
-        </p>
-
-        {/* Layered Stroke Typography Title */}
-        <div className="relative mb-16 sm:mb-20 md:mb-24 flex flex-col items-center justify-center w-full">
-          {/* Background Gradient Outline Text */}
-          <span
-                       className="text-[5.5rem] min-[400px]:text-[7rem] sm:text-[12rem] md:text-[14rem] font-black tracking-tighter select-none leading-none opacity-60 bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC04,#34A853)]"
-           style={{
-              WebkitBackgroundClip: 'text',
-              backgroundClip: 'text',
-              WebkitTextFillColor: 'white',
-              WebkitTextStroke: '4px transparent'
-            }}
-          >
-            GDG on Campus
-          </span>
-
-          {/* Spotlight Reveal Hover Text */}
-          <h1 className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex justify-center pointer-events-auto">
-            <div
-              ref={titleRef}
-              className="relative px-2 sm:px-4 py-2"
-              onMouseMove={handleMouseMove}
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
-              {/* Base Text (Solid Black) */}
-              <span className="text-4xl min-[400px]:text-5xl sm:text-7xl md:text-[7.5rem] font-bold tracking-tight text-gray-900 block select-none whitespace-nowrap">
-                Season of Code
-              </span>
-
-              {/* Reveal Text (Gradient clipped by a circle) */}
-              <span
-                className="absolute inset-0 px-4 py-2 text-4xl min-[400px]:text-5xl sm:text-7xl md:text-[7.5rem] font-bold tracking-tight text-transparent bg-clip-text bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC04,#34A853)] block pointer-events-none transition-opacity duration-300 select-none whitespace-nowrap"
-                style={{
-                  opacity: isHovered ? 1 : 0,
-                  clipPath: `circle(80px at ${mousePos.x}px ${mousePos.y}px)`
-                }}
-              >
-                Season of Code
-              </span>
-            </div>
-          </h1>
+        {/* Pixel-sampled DotText Components */}
+        <div className="flex flex-col items-center justify-center mb-10 gap-6 w-full max-w-5xl mx-auto px-4">
+          <div className="w-11/12 sm:w-4/5 md:w-3/4">
+            <DotText 
+              text="SEASON OF" 
+              color="#E8D98A" 
+              fontSize={120} 
+              dotRadius={4} 
+              gap={3} 
+            />
+          </div>
+          
+          <div className="w-full sm:w-11/12 md:w-full max-w-3xl">
+            <DotText 
+              text="CODE" 
+              color="#B8C7A8" 
+              fontSize={160} 
+              dotRadius={5} 
+              gap={4} 
+              variant="code"
+            />
+          </div>
         </div>
 
-        {/* Taglines */}
-        <div className="flex flex-col items-center gap-2 mb-6 sm:mb-8 pointer-events-none">
-          <p className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 tracking-tight">
-            Write code that matters
-          </p>
-          <p className="text-sm sm:text-base md:text-lg text-gray-600 font-light tracking-wide">
-            Your first open source contribution starts here.
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-6 mt-2 mb-10">
+          <a href="#register" className="px-8 py-4 bg-[#E8D98A] text-[#300000] font-bold rounded-full hover:bg-[#d4c575] hover:scale-105 transition-all shadow-lg text-lg flex items-center justify-center">
+            Register Now
+          </a>
+          <a href="#projects" className="px-8 py-4 bg-transparent border-2 border-[#B8C7A8] text-[#B8C7A8] font-bold rounded-full hover:bg-[#B8C7A8] hover:text-[#300000] hover:scale-105 transition-all shadow-lg text-lg flex items-center justify-center">
+            Explore Projects
+          </a>
+        </div>
+
+        {/* Pixelated/Monospace Tagline */}
+        <div className="mt-4 mb-16 font-mono">
+          <p className="text-white text-lg sm:text-2xl tracking-[0.3em] uppercase drop-shadow-lg"
+             style={{ textShadow: '2px 2px 0 #300000' }}>
+            Write Code That Matters
           </p>
         </div>
 
-        {/* Minimal Animated Buttons v7 */}
-        <div className="flex flex-col sm:flex-row items-center gap-8 pointer-events-auto">
-
-          {/* Primary: Expanding Arrow Pop */}
-          <a href="#register" className="group relative h-[52px] px-8 bg-[#111] text-white rounded-full text-sm font-medium tracking-wide transition-all duration-300 hover:pr-14 hover:shadow-lg flex items-center overflow-hidden">
-            <span className="relative z-10 whitespace-nowrap">Register Now</span>
-            <div className="absolute right-5 opacity-0 -translate-x-6 transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:opacity-100 group-hover:translate-x-0">
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </div>
-          </a>
-
-          {/* Secondary: Center-Out Underline */}
-          <a href="/projects" className="group relative py-2 text-sm font-medium tracking-wide text-gray-500 transition-colors duration-300 hover:text-gray-900">
-            Explore projects
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1.5px] bg-gray-900 group-hover:w-full transition-all duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]"></div>
-          </a>
+        {/* Bottom text */}
+        <div className="mt-6">
+          <h2 className="text-white text-xl sm:text-3xl font-bold tracking-wide drop-shadow-md">
+            An Open-Source Contribution Program
+          </h2>
         </div>
+
       </div>
     </section>
   );
 };
 
 export default Hero;
+

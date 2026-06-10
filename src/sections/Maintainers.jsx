@@ -10,9 +10,9 @@ const Maintainers = () => {
   ];
 
   return (
-    <section id="maintainers" className="py-24 bg-white">
+    <section id="maintainers" className="py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-black text-black tracking-tight mb-16 text-center">
+        <h2 className="text-4xl font-doto md:text-8xl font-bold text-white mb-16 text-center">
           Maintainers
         </h2>
         
@@ -22,7 +22,7 @@ const Maintainers = () => {
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gray-100 border border-gray-200 group-hover:border-black transition-all overflow-hidden group-hover:-translate-y-1">
                 <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${person.name}`} alt={person.name} className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-6">{person.name}</h3>
+              <h3 className="text-xl font-bold font-doto text-gray-900 mb-6">{person.name}</h3>
               <div className="flex justify-center space-x-4">
                 <a href={person.github} className="text-gray-400 hover:text-black transition-colors">
                   <FaGithub size={20} />
