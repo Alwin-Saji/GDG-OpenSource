@@ -47,14 +47,23 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
 
             {/* Logo with playful hover */}
-            <Link to="/" onClick={scrollToTop} className="flex items-center space-x-3 group cursor-pointer">
-              <div className="flex -space-x-1.5 transition-transform duration-300 group-hover:scale-110">
-                <span className="w-3 h-3 rounded-full bg-[#4285F4] mix-blend-multiply shadow-sm transition-transform duration-300 group-hover:-translate-y-1"></span>
-                <span className="w-3 h-3 rounded-full bg-[#EA4335] mix-blend-multiply shadow-sm transition-transform duration-300 group-hover:translate-y-1"></span>
-                <span className="w-3 h-3 rounded-full bg-[#FBBC04] mix-blend-multiply shadow-sm transition-transform duration-300 group-hover:-translate-y-1"></span>
-                <span className="w-3 h-3 rounded-full bg-[#34A853] mix-blend-multiply shadow-sm transition-transform duration-300 group-hover:translate-y-1"></span>
+            <Link to="/" onClick={scrollToTop} className="flex items-center space-x-2.5 group cursor-pointer">
+              <div className="transition-transform duration-300 group-hover:scale-110">
+                <svg width="40" height="40" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {/* Blue pill (left) */}
+                  <path d="M55 100 L55 70 Q55 50 75 50 L95 50 Q115 50 115 70 L115 100 Q115 120 95 120 L75 120 Q55 120 55 100 Z" fill="#4285F4" className="transition-transform duration-300 group-hover:-translate-x-0.5"/>
+                  {/* Red pill (top right) */}
+                  <path d="M100 55 L130 55 Q150 55 150 75 L150 95 Q150 115 130 115 L100 115 Q80 115 80 95 L80 75 Q80 55 100 55 Z" fill="#EA4335" className="transition-transform duration-300 group-hover:-translate-y-0.5"/>
+                  {/* Yellow pill (bottom right) */}
+                  <path d="M100 85 L130 85 Q150 85 150 105 L150 125 Q150 145 130 145 L100 145 Q80 145 80 125 L80 105 Q80 85 100 85 Z" fill="#FBBC04" className="transition-transform duration-300 group-hover:translate-y-0.5"/>
+                  {/* Green pill (right) */}
+                  <path d="M145 100 L145 70 Q145 50 165 50 L185 50 Q205 50 205 70 L205 100 Q205 120 185 120 L165 120 Q145 120 145 100 Z" fill="#34A853" className="transition-transform duration-300 group-hover:translate-x-0.5"/>
+                </svg>
               </div>
-              <span className="text-xl font-bold tracking-tight text-[#171717]">GDG on Campus CEC.</span>
+              <div className="flex flex-col -space-y-1">
+                <span className="text-base font-semibold tracking-tight text-[#171717]">Google Developers Group</span>
+                <span className="text-sm font-medium tracking-tight text-[#4285F4]">College of Engineering Chengannur</span>
+              </div>
             </Link>
 
             {/* Desktop Links with simple text transition */}
