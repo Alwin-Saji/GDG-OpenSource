@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MdMenu, MdClose } from 'react-icons/md';
 import { Link } from 'react-router-dom';
-import gdgLogo from '../assets/gdg-logo.svg';
+import gdgLogo from '../assets/gdg-logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
