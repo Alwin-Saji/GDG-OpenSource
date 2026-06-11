@@ -138,13 +138,13 @@ const Navbar = () => {
               Home
             </Link>
             <Link
-              to="/projects"
+              to="#"
               onClick={() => setIsOpen(false)}
               className="block px-4 py-3 text-base font-medium text-gray-500 hover:text-[#171717] hover:bg-gray-50 rounded-xl transition-all duration-300"
             >
               Projects
             </Link>
-            {['Workflow', 'Leaderboard', 'FAQ'].map((item) => (
+            {['Workflow', 'Leaderboard', 'FAQs'].map((item) => (
               <a
                 key={item}
                 href={`/#${item.toLowerCase()}`}

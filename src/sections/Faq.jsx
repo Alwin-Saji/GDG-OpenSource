@@ -8,23 +8,23 @@ const faqData = [
     color: "#669DF6" // Medium Blue
   },
   {
-    question: "What kind of projects are available?",
-    answer: "We have a diverse range of projects including web applications, machine learning models, mobile apps, and developer tools. You can choose based on your interests and skill set.",
+    question: "What do I need before I can start contributing?",
+    answer: "You need three things: a GitHub account, Git installed on your machine, and a code editor. Once set up, fork the repository you want to contribute to, clone it locally, and follow the setup instructions in the README. Make sure the project runs on your machine before picking up any issue.",
     color: "#EE675C" // Medium Red
   },
   {
-    question: "How do I get started?",
-    answer: "Start by registering for the program, joining our community channels, and checking out the 'Good First Issues' on our GitHub repositories.",
+    question: "What counts as a valid contribution for scoring?",
+    answer: "Only merged pull requests count. A PR that is submitted but not merged does not contribute to your score. Focus on doing the work well rather than submitting as many PRs as possible.",
     color: "#FCC936" // Medium Yellow
   },
   {
-    question: "Is there any mentorship provided?",
-    answer: "Yes, we pair contributors with experienced mentors who will guide you through the process, help with code reviews, and provide technical support.",
+    question: "Can I use AI tools like ChatGPT or GitHub Copilot?",
+    answer: "AI assistance may be permitted.Maintainers may ask you to explain your implementation. Blindly pasting generated code you do not understand is not acceptable",
     color: "#5BB974" // Medium Green
   },
   {
     question: "Do I need to know specific programming languages?",
-    answer: "No specific language is strictly required, but familiarity with JavaScript, Python, or Go can be very helpful depending on the project you choose.",
+    answer: "No specific language is strictly required, but familiarity with JavaScript, Python and so on can be very helpful depending on the project you choose.",
     color: "#669DF6" // Medium Blue
   }
 ];
@@ -42,7 +42,7 @@ const Faq = () => {
         
         <div className="mb-10 md:mb-16">
           <h2 className="text-4xl font-doto md:text-8xl font-bold text-center text-white tracking-tight">
-            FAQ
+            FAQs
           </h2>
         </div>
 
