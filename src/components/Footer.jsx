@@ -22,7 +22,7 @@ const Footer = () => {
                 Season of Code
             </h2>
             <p className="text-[#E8D98A] text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">
-              Empowering developers to build the open-source ecosystem together. Join thousands of contributors making a difference.
+              Write code that matters.
             </p>
             <a href="/projects" className="inline-flex items-center gap-2 border border-white/40 hover:border-white rounded-full py-2 px-4 text-xs sm:text-sm font-semibold text-white/80 hover:text-white transition-colors group">
               Start Contributing <FaArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
@@ -62,16 +62,17 @@ const Footer = () => {
                     <FaPhoneAlt className="text-gray-300 mt-0.5 group-hover:text-white transition-colors" size={12} />
                     <div className="flex flex-col">
                       <span className="text-xs sm:text-sm font-medium text-[#B8C7A8]">Phone</span>
-                      <span className="text-xs sm:text-sm text-gray-300 group-hover:text-white transition-colors">+1 (800) 123-4567</span>
+                      <span className="text-xs sm:text-sm text-gray-300 group-hover:text-white transition-colors">+91 91882 86360</span>
+                      <span className="text-xs sm:text-sm text-gray-300 group-hover:text-white transition-colors">+91 90375 14241</span>
                     </div>
                   </a>
                 </li>
                 <li>
-                  <a href="https://maps.google.com/?q=College+of+Engineering+Chengannur" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 sm:gap-3 group">
-                    <FaMapMarkerAlt className="text-gray-300 mt-0.5 group-hover:text-white transition-colors" size={12} />
+                  <a href="mailto:gdgoncampuscec@gmail.com" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 sm:gap-3 group">
+                    <FaEnvelope className="text-gray-300 mt-0.5 group-hover:text-white transition-colors" size={14} />
                     <div className="flex flex-col">
                       <span className="text-sm font-medium text-[#B8C7A8]">Email</span>
-                      <span className="text-sm text-gray-300 group-hover:text-white transition-colors">[EMAIL_ADDRESS]</span>
+                      <span className="text-sm text-gray-300 group-hover:text-white transition-colors">gdgoncampuscec@gmail.com</span>
                     </div>
                   </a> 
                 </li>
@@ -97,10 +98,10 @@ const Footer = () => {
           </p>
           
           <div className="flex gap-5">
-            <a href="#" className="text-gray-300 hover:text-[#E1306C] transition-colors" aria-label="Instagram">
+            <a href="https://www.instagram.com/gdg_oncampus_cec?igsh=MXI1b2JsNGszeG16cg==" className="text-gray-300 hover:text-[#E1306C] transition-colors" aria-label="Instagram">
               <FaInstagram size={16} className="sm:w-[18px] sm:h-[18px]" />
             </a>
-            <a href="#" className="text-gray-300 hover:text-[#0077B5] transition-colors" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/company/gdsc-cec/" className="text-gray-300 hover:text-[#0077B5] transition-colors" aria-label="LinkedIn">
               <FaLinkedin size={16} className="sm:w-[18px] sm:h-[18px]" />
             </a>
           </div>
