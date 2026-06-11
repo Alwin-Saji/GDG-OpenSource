@@ -15,7 +15,7 @@ const Loader = () => {
 
   return (
     <motion.div
-      className="fixed inset-0 z-[999] bg-white flex flex-col items-center justify-center"
+      className="fixed inset-0 z-[999] bg-[#4A0A0F] flex flex-col items-center justify-center"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0, filter: "blur(10px)", scale: 1.1 }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}

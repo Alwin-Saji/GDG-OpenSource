@@ -24,7 +24,8 @@ const Workflow = () => {
       color: "text-[#4285F4]",
       bg: "bg-[#4285F4]/10",
       hex: "#4285F4",
-      rgba: "rgba(66, 133, 244, 0.15)"
+      rgba: "rgba(66, 133, 244, 0.15)",
+      hoverText: "group-hover:text-[#4285F4]"
     },
     {
       number: "02",
@@ -34,7 +35,8 @@ const Workflow = () => {
       color: "text-[#EA4335]",
       bg: "bg-[#EA4335]/10",
       hex: "#EA4335",
-      rgba: "rgba(234, 67, 53, 0.15)"
+      rgba: "rgba(234, 67, 53, 0.15)",
+      hoverText: "group-hover:text-[#EA4335]"
     },
     {
       number: "03",
@@ -44,7 +46,8 @@ const Workflow = () => {
       color: "text-[#FBBC04]",
       bg: "bg-[#FBBC04]/10",
       hex: "#FBBC04",
-      rgba: "rgba(251, 188, 4, 0.15)"
+      rgba: "rgba(251, 188, 4, 0.15)",
+      hoverText: "group-hover:text-[#FBBC04]"
     },
     {
       number: "04",
@@ -54,7 +57,8 @@ const Workflow = () => {
       color: "text-[#34A853]",
       bg: "bg-[#34A853]/10",
       hex: "#34A853",
-      rgba: "rgba(52, 168, 83, 0.15)"
+      rgba: "rgba(52, 168, 83, 0.15)",
+      hoverText: "group-hover:text-[#34A853]"
     },
     {
       number: "05",
@@ -64,7 +68,8 @@ const Workflow = () => {
       color: "text-[#4285F4]",
       bg: "bg-[#4285F4]/10",
       hex: "#4285F4",
-      rgba: "rgba(66, 133, 244, 0.15)"
+      rgba: "rgba(66, 133, 244, 0.15)",
+      hoverText: "group-hover:text-[#4285F4]"
     }
   ];
 
@@ -180,7 +185,7 @@ const Workflow = () => {
           <h2 className="text-4xl md:text-7xl font-bold font-doto tracking-tighter text-white mb-6">
             How it works.
           </h2>
-          <p className="text-gray-300 text-md md:text-xl max-w-2xl mx-auto">
+          <p className="text-[#E8D98A] text-md md:text-xl max-w-2xl mx-auto">
             A seamless, vertical integration process designed to get your code into the core as quickly as possible.
           </p>
         </motion.div>
@@ -207,7 +212,7 @@ const Workflow = () => {
                   {/* Timeline Dot (Smaller) */}
                   <div
                     ref={el => dotsRef.current[index] = el}
-                    className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-10 h-10 md:w-11 md:h-11 bg-white border-[2px] border-gray-100 rounded-full flex items-center justify-center shadow-sm z-20"
+                    className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-10 h-10 md:w-11 md:h-11 bg-red-900 border-[2px] border-red-950 rounded-full flex items-center justify-center shadow-sm z-20"
                   >
                     <span className={`text-xs md:text-sm font-black ${step.color}`}>{step.number}</span>
                   </div>
@@ -235,11 +240,11 @@ const Workflow = () => {
                         />
 
                         {/* Content */}
-                        <div className="relative z-10">
-                          <h3 className="text-md uppercase font-doto font-semibold md:text-xl text-white mb-1.5 tracking-tight transition-colors duration-300">
-                            {step.title}
+                        <div className="relative z-10 group">
+                          <h3 className={`text-md uppercase font-doto font-semibold md:text-xl text-[#B8C7A8] ${step.hoverText} mb-1.5 tracking-tight transition-colors duration-300`}>
+                           {step.title}
                           </h3>
-                          <p className="text-gray-200 text-[12px] md:text-sm leading-relaxed max-w-sm transition-colors duration-300">
+                          <p className="text-[#E8D98A] group-hover:text-white text-[12px] md:text-sm leading-relaxed max-w-sm transition-colors duration-300">
                             {step.description}
                           </p>
                         </div>
@@ -274,7 +279,7 @@ const Workflow = () => {
           <h2 className="text-4xl md:text-8xl font-doto font-bold tracking-tight text-white mb-6">
             The Timeline.
           </h2>
-          <p className="text-gray-200 text-md md:text-xl font-light max-w-2xl">
+          <p className="text-[#E8D98A]  text-md md:text-xl max-w-2xl">
             A precise schedule orchestrating the open source contribution period from initiation to final evaluation.
           </p>
         </motion.div>
@@ -318,10 +323,10 @@ const Workflow = () => {
                       <span className={`w-1 h-1 rounded-full ${item.color}`}></span>
                       {item.date}
                     </div>
-                    <h3 className={`text-md md:text-xl font-medium text-white mb-3 leading-snug transition-all duration-300 ${item.clip}`}>
+                    <h3 className={`text-md md:text-xl font-medium uppercase text-[#B8C7A8] mb-3 leading-snug transition-all duration-300 ${item.clip}`}>
                       {item.event}
                     </h3>
-                    <p className="text-gray-100 text-[12px] md:text-sm font-light leading-relaxed">
+                    <p className="text-[#E8D98A] text-[12px] md:text-sm leading-relaxed">
                       {item.description}
                     </p>
                   </motion.div>

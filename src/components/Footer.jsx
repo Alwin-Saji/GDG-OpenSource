@@ -21,7 +21,7 @@ const Footer = () => {
               </div>
                 Season of Code
             </h2>
-            <p className="text-gray-100 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">
+            <p className="text-[#E8D98A] text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">
               Empowering developers to build the open-source ecosystem together. Join thousands of contributors making a difference.
             </p>
             <a href="/projects" className="inline-flex items-center gap-2 border border-white/40 hover:border-white rounded-full py-2 px-4 text-xs sm:text-sm font-semibold text-white/80 hover:text-white transition-colors group">
@@ -33,21 +33,21 @@ const Footer = () => {
           <div className="flex flex-wrap gap-12 sm:gap-20">
             {/* Nav Links */}
             <div>
-              <h4 className="text-white font-semibold mb-3 sm:mb-4 text-xs sm:text-sm">Navigation</h4>
-              <ul className="space-y-2 sm:space-y-3">
-                <li><a href="/#about" className="text-xs sm:text-sm text-gray-300 hover:text-white transition-colors">About</a></li>
-                <li><a href="/#workflow" className="text-xs sm:text-sm text-gray-300 hover:text-white transition-colors">Workflow</a></li>
-                <li><a href="/#leaderboard" className="text-xs sm:text-sm text-gray-300 hover:text-white transition-colors">Leaderboard</a></li>
-                <li><a href="/#faq" className="text-xs sm:text-sm text-gray-300 hover:text-white transition-colors">FAQ</a></li>
+              <h4 className="text-[#E8D98A] font-semibold mb-3 sm:mb-4 text-xs sm:text-sm">Navigation</h4>
+              <ul className="space-y-2 sm:space-y-3 font-semibold">
+                <li><a href="/#about" className="text-xs sm:text-sm text-[#B8C7A8] hover:text-white transition-colors">About</a></li>
+                <li><a href="/#workflow" className="text-xs sm:text-sm text-[#B8C7A8] hover:text-white transition-colors">Workflow</a></li>
+                <li><a href="/#leaderboard" className="text-xs sm:text-sm text-[#B8C7A8] hover:text-white transition-colors">Leaderboard</a></li>
+                <li><a href="/#faq" className="text-xs sm:text-sm text-[#B8C7A8] hover:text-white transition-colors">FAQ</a></li>
               </ul>
             </div>
 
             {/* Resources */}
             <div>
-              <h4 className="text-white font-semibold mb-3 sm:mb-4 text-xs sm:text-sm">Resources</h4>
-              <ul className="space-y-2 sm:space-y-3">
-                <li><Link to="/contributor-guidelines" className="text-xs sm:text-sm text-gray-300 hover:text-white transition-colors">Contributors</Link></li>
-                <li><Link to="/maintainer-guidelines" className="text-xs sm:text-sm text-gray-300 hover:text-white transition-colors">Maintainers</Link></li>
+              <h4 className="text-[#E8D98A] font-semibold mb-3 sm:mb-4 text-xs sm:text-sm">Resources</h4>
+              <ul className="space-y-2 sm:space-y-3 font-semibold">
+                <li><Link to="/contributor-guidelines" className="text-xs sm:text-sm text-[#B8C7A8] hover:text-white transition-colors">Contributors</Link></li>
+                <li><Link to="/maintainer-guidelines" className="text-xs sm:text-sm text-[#B8C7A8] hover:text-white transition-colors">Maintainers</Link></li>
                 {/* <li><a href="#" className="text-sm text-gray-500 hover:text-black transition-colors">Documentation</a></li>
                 <li><a href="#" className="text-sm text-gray-500 hover:text-black transition-colors">API Reference</a></li> */}
               </ul>
@@ -55,13 +55,13 @@ const Footer = () => {
 
             {/* Contact Info */}
             <div>
-              <h4 className="text-white font-semibold mb-4 text-sm">Contact</h4>
+              <h4 className="text-[#E8D98A] font-semibold mb-4 text-sm">Contact</h4>
               <ul className="space-y-4">
                 <li>
                   <a href="tel:+18001234567" className="flex items-start gap-2 sm:gap-3 group">
                     <FaPhoneAlt className="text-gray-300 mt-0.5 group-hover:text-white transition-colors" size={12} />
                     <div className="flex flex-col">
-                      <span className="text-xs sm:text-sm font-medium text-white">Phone</span>
+                      <span className="text-xs sm:text-sm font-medium text-[#B8C7A8]">Phone</span>
                       <span className="text-xs sm:text-sm text-gray-300 group-hover:text-white transition-colors">+1 (800) 123-4567</span>
                     </div>
                   </a>
@@ -70,7 +70,7 @@ const Footer = () => {
                   <a href="https://maps.google.com/?q=College+of+Engineering+Chengannur" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 sm:gap-3 group">
                     <FaMapMarkerAlt className="text-gray-300 mt-0.5 group-hover:text-white transition-colors" size={12} />
                     <div className="flex flex-col">
-                      <span className="text-sm font-medium text-white">Email</span>
+                      <span className="text-sm font-medium text-[#B8C7A8]">Email</span>
                       <span className="text-sm text-gray-300 group-hover:text-white transition-colors">[EMAIL_ADDRESS]</span>
                     </div>
                   </a> 
@@ -79,7 +79,7 @@ const Footer = () => {
                   <a href="https://maps.google.com/?q=College+of+Engineering+Chengannur" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 group">
                     <FaMapMarkerAlt className="text-gray-300 mt-0.5 group-hover:text-white transition-colors" size={14} />
                     <div className="flex flex-col">
-                      <span className="text-sm font-medium text-white">Location</span>
+                      <span className="text-sm font-medium text-[#B8C7A8]">Location</span>
                       <span className="text-sm text-gray-300 group-hover:text-white transition-colors">College of Engineering Chengannur,<br/>Alappuzha, Kerala - 689121</span>
                     </div>
                   </a>

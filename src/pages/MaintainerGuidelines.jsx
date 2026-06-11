@@ -64,7 +64,7 @@ const MaintainerGuidelines = () => {
           <h1 className="text-4xl sm:text-5xl md:text-7xl tracking-tighter text-white font-doto font-bold mb-6">
             Maintainer Manual.
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 font-light max-w-xl leading-relaxed">
+          <p className="text-lg md:text-xl text-[#E8D98A] max-w-xl leading-relaxed">
             Principles, practices, and expectations for the stewards of our open-source ecosystem.
           </p>
         </motion.div>
@@ -81,7 +81,7 @@ const MaintainerGuidelines = () => {
             >
               <div className="flex flex-col md:flex-row md:gap-16">
                 <div className="md:w-1/3 mb-6 md:mb-0">
-                  <h2 className="text-2xl font-medium text-white tracking-tight flex items-center gap-3">
+                  <h2 className="text-2xl font-medium text-[#B8C7A8] tracking-tight flex items-center gap-3">
                     <span 
                       className="w-1.5 h-1.5 rounded-full transition-transform duration-300 group-hover:scale-150" 
                       style={{ backgroundColor: section.color }} 

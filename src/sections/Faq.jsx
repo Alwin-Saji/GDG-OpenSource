@@ -61,7 +61,7 @@ const Faq = () => {
                 >
                   <span 
                     className="text-md md:text-2xl font-light transition-colors duration-500"
-                    style={{ color: isOpen ? faq.color : 'white' }}
+                    style={{ color: isOpen ? faq.color : '#E8D98A' }}
                   >
                     {faq.question}
                   </span>
@@ -99,7 +99,7 @@ const Faq = () => {
                       }}
                       className="overflow-hidden"
                     >
-                      <div className="pb-6 md:pb-8 text-white font-light text-sm md:text-lg leading-relaxed pr-6 md:pr-12">
+                      <div className="pb-6 md:pb-8 text-white font-[400] text-sm md:text-lg leading-relaxed pr-6 md:pr-12">
                         {faq.answer}
                       </div>
                     </motion.div>

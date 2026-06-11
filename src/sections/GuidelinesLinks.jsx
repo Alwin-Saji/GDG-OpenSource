@@ -22,15 +22,15 @@ const GuidelinesLinks = () => {
             </div>
 
             <div className="relative z-10 pointer-events-none flex flex-col items-center justify-center">
-              <h2 className="text-2xl sm:text-4xl font-semibold tracking-tight text-white mb-2">
+              <h2 className="text-2xl sm:text-4xl font-doto font-semibold tracking-tight text-[#E8D98A] mb-2">
                 For Contributors
               </h2>
-              <p className="text-xl sm:text-xl font-light text-gray-100 mb-8">
+              <p className="text-xl sm:text-xl text-gray-100 mb-8">
                 Start your open source journey
               </p>
               <Link
                 to="/contributor-guidelines"
-                className="pointer-events-auto px-8 py-3 bg-[#171717] hover:bg-white hover:text-[#171717] text-white rounded-full font-medium transition-colors"
+                className="pointer-events-auto px-8 py-3 bg-black hover:bg-white hover:text-black text-white rounded-full font-medium transition-colors"
               >
                 View Guidelines
               </Link>
@@ -48,10 +48,10 @@ const GuidelinesLinks = () => {
             </div>
 
             <div className="relative z-10 pointer-events-none flex flex-col items-center justify-center">
-              <h2 className="text-2xl uppercase sm:text-4xl font-semibold tracking-tight text-white mb-2">
+              <h2 className="text-2xl sm:text-4xl font-doto font-semibold tracking-tight text-[#bff38c] mb-2">
                 For Maintainers
               </h2>
-              <p className="text-xl sm:text-xl font-light text-gray-100 mb-8">
+              <p className="text-xl sm:text-xl text-gray-100 mb-8">
                 Manage and grow your projects
               </p>
               <Link

@@ -69,13 +69,13 @@ const Navbar = () => {
               <Link
                 to="/"
                 onClick={scrollToTop}
-                className="px-4 py-2 text-sm font-medium text-white/60 hover:text-white transition-all duration-300"
+                className="px-4 py-2 text-sm font-medium text-[#E8D98A]/70 hover:text-[#E8D98A] transition-all duration-300"
               >
                 Home
               </Link>
               <Link
                 to="/projects"
-                className="px-4 py-2 text-sm font-medium text-white/60 hover:text-white transition-all duration-300"
+                className="px-4 py-2 text-sm font-medium text-[#E8D98A]/70 hover:text-[#E8D98A] transition-all duration-300"
               >
                 Projects
               </Link>
@@ -83,7 +83,7 @@ const Navbar = () => {
                 <a
                   key={item}
                   href={`/#${item.toLowerCase()}`}
-                  className="px-4 py-2 text-sm font-medium text-white/60 hover:text-white transition-all duration-300"
+                  className="px-4 py-2 text-sm font-medium text-[#E8D98A]/70 hover:text-[#E8D98A] transition-all duration-300"
                 >
                   {item}
                 </a>
@@ -91,7 +91,7 @@ const Navbar = () => {
 
               {/* Resources Dropdown */}
               <div className="relative group">
-                <button className="px-4 py-2 text-sm font-medium text-white/60 hover:text-white transition-all duration-300 flex items-center gap-1 outline-none">
+                <button className="px-4 py-2 text-sm font-medium text-[#E8D98A]/70 hover:text-[#E8D98A] transition-all duration-300 flex items-center gap-1 outline-none">
                   Resources
                   <svg className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -99,8 +99,8 @@ const Navbar = () => {
                 </button>
                 <div className="absolute top-full right-0 mt-2 w-56 bg-[#4A0A0F] border border-[#4A0A0F] rounded-lg shadow-lg shadow-black/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <div className="py-2">
-                    <Link to="/contributor-guidelines" className="block px-4 py-2.5 text-sm text-white/90 hover:bg-gray-50 hover:text-black transition-colors">Contributor Guidelines</Link>
-                    <Link to="/maintainer-guidelines" className="block px-4 py-2.5 text-sm text-white/90 hover:bg-gray-50 hover:text-black transition-colors">Maintainer Guidelines</Link>
+                    <Link to="/contributor-guidelines" className="block px-4 py-2.5 text-sm text-[#E8D98A]/70 hover:text-[#E8D98A] transition-colors">Contributor Guidelines</Link>
+                    <Link to="/maintainer-guidelines" className="block px-4 py-2.5 text-sm text-[#E8D98A]/70 hover:text-[#E8D98A] transition-colors">Maintainer Guidelines</Link>
                     {/* <a href="#" className="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-black transition-colors">Documentation</a>
                     <a href="#" className="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-black transition-colors">API Reference</a> */}
                   </div>

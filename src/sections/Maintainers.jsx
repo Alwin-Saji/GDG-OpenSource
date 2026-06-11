@@ -18,16 +18,16 @@ const Maintainers = () => {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {maintainers.map((person, index) => (
-            <div key={index} className="minimal-card rounded-2xl p-8 text-center group">
+            <div key={index} className="minimal-card rounded-2xl p-8 text-center group" style={{backgroundColor: "#E8D98A",borderStyle:"solid",borderWidth:"3px",borderColor:"#B8C7A8"}}>
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gray-100 border border-gray-200 group-hover:border-black transition-all overflow-hidden group-hover:-translate-y-1">
                 <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${person.name}`} alt={person.name} className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-xl font-bold font-doto text-gray-900 mb-6">{person.name}</h3>
+              <h3 className="text-xl font-serif text-[#40740a] mb-6">{person.name}</h3>
               <div className="flex justify-center space-x-4">
                 <a href={person.github} className="text-gray-400 hover:text-black transition-colors">
                   <FaGithub size={20} />
                 </a>
-                <a href={person.website} className="text-gray-400 hover:text-black transition-colors">
+                <a href={person.website} className="text-gray-400 hover:text-white transition-colors">
                   <FaGlobe size={20} />
                 </a>
               </div>
