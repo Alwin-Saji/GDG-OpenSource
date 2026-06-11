@@ -19,7 +19,7 @@ const Workflow = () => {
     {
       number: "01",
       title: "Registration",
-      description: "Initialize your profile and explore the matrix of available repositories. Connect your GitHub account to begin.",
+      description: "Initialize your profile and explore the available repositories.",
       icon: FiUserPlus,
       color: "text-[#4285F4]",
       bg: "bg-[#4285F4]/10",
@@ -30,7 +30,7 @@ const Workflow = () => {
     {
       number: "02",
       title: "Find Issue",
-      description: "Target an anomaly or feature that matches your specific skill vector. Filter by language, difficulty, or project.",
+      description: "Target an issue or a feature that matches your specific skill vector. Filter by programming language, difficulty, or project.",
       icon: FiTarget,
       color: "text-[#EA4335]",
       bg: "bg-[#EA4335]/10",
@@ -41,7 +41,7 @@ const Workflow = () => {
     {
       number: "03",
       title: "Submit PR",
-      description: "Compile clean logic and inject your pull request into the core. Ensure all tests pass before submission.",
+      description: "Compile clean logic and add your pull request into the core. Ensure all tests pass before submission.",
       icon: FiGitPullRequest,
       color: "text-[#FBBC04]",
       bg: "bg-[#FBBC04]/10",
@@ -52,7 +52,7 @@ const Workflow = () => {
     {
       number: "04",
       title: "Review",
-      description: "Synchronize with system maintainers to refine and optimize your payload. Address feedback iteratively.",
+      description: "Synchronize with system maintainers to refine and optimize your pull request. Address the feedbacks iteratively.",
       icon: FiMessageCircle,
       color: "text-[#34A853]",
       bg: "bg-[#34A853]/10",
@@ -63,7 +63,7 @@ const Workflow = () => {
     {
       number: "05",
       title: "Merged",
-      description: "Integration complete. Your logic is live. Accrue system privileges and climb the global leaderboard.",
+      description: "Integration complete. Your logic is live and it becomes a part of the repository's permanent history",
       icon: FiAward,
       color: "text-[#4285F4]",
       bg: "bg-[#4285F4]/10",
