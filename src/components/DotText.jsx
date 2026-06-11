@@ -108,7 +108,8 @@ const DotText = ({
   text, 
   color = '#FFFFFF', 
   dotRadius = 6,
-  variant = 'season'
+  variant = 'season',
+  wordDelayOffset = 0
 }) => {
   // Gap is 15% of dot diameter
   const gap = dotRadius * 2 * 0.15;
@@ -118,8 +119,15 @@ const DotText = ({
   // Calculate total width and bounds
   let currentX = 0;
   const dots = [];
+  let currentWordIndex = 0;
+  let wordDotIndex = 0;
   
   letters.forEach((char) => {
+    if (char === ' ') {
+      currentWordIndex++;
+      wordDotIndex = 0;
+    }
+
     const grid = CHAR_MAP[char] || CHAR_MAP[' '];
     const width = grid[0].length;
     const height = grid.length;
@@ -129,7 +137,9 @@ const DotText = ({
         if (grid[y][x] === '1') {
           dots.push({
             cx: currentX + x * (dotRadius * 2 + gap) + dotRadius,
-            cy: y * (dotRadius * 2 + gap) + dotRadius
+            cy: y * (dotRadius * 2 + gap) + dotRadius,
+            wordIndex: currentWordIndex,
+            dotIndex: wordDotIndex++
           });
         }
       }
@@ -150,15 +160,27 @@ const DotText = ({
         style={{ overflow: 'visible' }}
       >
         {dots.map((dot, i) => (
-          <circle 
-            key={i} 
-            cx={dot.cx} 
-            cy={dot.cy} 
-            r={dotRadius} 
-            fill={color} 
-            className="transition-all duration-300 hover:scale-150 hover:-translate-y-1"
-            style={{ transformOrigin: 'center', transformBox: 'fill-box' }}
-          />
+          <g key={i} className="group">
+            {/* Larger invisible hit area to prevent jittering when the visible dot moves/scales */}
+            <circle 
+              cx={dot.cx} 
+              cy={dot.cy} 
+              r={dotRadius * 2.5} 
+              fill="transparent" 
+            />
+            <circle 
+              cx={dot.cx} 
+              cy={dot.cy} 
+              r={dotRadius} 
+              fill={color} 
+              className="transition-transform duration-100 ease-out group-hover:scale-150 group-hover:-translate-y-1 pointer-events-none animate-dot-in"
+              style={{ 
+                transformOrigin: 'center', 
+                transformBox: 'fill-box',
+                animationDelay: `${(wordDelayOffset + dot.wordIndex) * 0.8 + dot.dotIndex * 0.002}s` 
+              }}
+            />
+          </g>
         ))}
       </svg>
     </div>

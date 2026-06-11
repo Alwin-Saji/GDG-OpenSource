@@ -7,12 +7,42 @@
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --font-doto: 'Doto', monospace;
   --font-cody: 'Codystar', sans-serif;
+  --animate-dot-in: dot-in 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  --animate-word-in: word-in 0.6s ease-out both;
+}
+
+@keyframes dot-in {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes word-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body:not(.app-loaded) .animate-dot-in,
+body:not(.app-loaded) .animate-word-in {
+  animation-play-state: paused;
 }
 
 html {
   scroll-behavior: smooth;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  background-color: #5A0F15;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

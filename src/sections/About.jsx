@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { MdAdsClick, MdGroups, MdBolt } from 'react-icons/md';
 
 const About = () => {
@@ -35,20 +36,36 @@ const About = () => {
 
         {/* Header */}
         <div className="mb-12 lg:mb-20 flex flex-col md:flex-row items-center md:items-end justify-between gap-6 lg:gap-8 text-center md:text-left">
-          <h2 className="text-4xl md:text-5xl lg:text-7xl font-light text-white tracking-tighter leading-tight md:leading-none">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            className="text-4xl md:text-5xl lg:text-7xl font-light text-white tracking-tighter leading-tight md:leading-none"
+          >
            <span className="font-doto font-bold text-8xl">Why</span> <br className="hidden md:block" />
             <span className="font-medium text-transparent bg-clip-text bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC04,#34A853)]">Contribute?</span>
-          </h2>
-          <p className="text-[#E8D98A] text-lg md:text-base lg:text-lg max-w-md leading-relaxed pb-1 md:pb-2">
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-[#E8D98A] text-lg md:text-base lg:text-lg max-w-md leading-relaxed pb-1 md:pb-2"
+          >
           Season of Code is a community-run open source program by GDG on Campus CEC, designed to break down the barrier between writing code and contributing to real-world projects. Beginner or experienced — you'll find a project that fits. Maintainers guide you, the community supports you, and your pull requests actually matter.
-          </p>
+          </motion.p>
         </div>
 
         {/* Features in 1 Row */}
         <div className="flex flex-col md:flex-row gap-12 md:gap-8 lg:gap-16">
           {features.map((feature, index) => (
-            <div
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.3 + index * 0.2 }}
               className="group flex-1 flex flex-col cursor-default"
             >
               {/* Colored Line Indicator */}
@@ -66,7 +83,7 @@ const About = () => {
               <p className="text-[#E8D98A] text-[14px] hover:text-white md:text-sm lg:text-base leading-relaxed">
                 {feature.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
 

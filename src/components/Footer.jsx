@@ -24,9 +24,9 @@ const Footer = () => {
             <p className="text-[#E8D98A] text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">
               Write code that matters.
             </p>
-            <a href="/projects" className="inline-flex items-center gap-2 border border-white/40 hover:border-white rounded-full py-2 px-4 text-xs sm:text-sm font-semibold text-white/80 hover:text-white transition-colors group">
+            {/* <a href="/projects" className="inline-flex items-center gap-2 border border-white/40 hover:border-white rounded-full py-2 px-4 text-xs sm:text-sm font-semibold text-white/80 hover:text-white transition-colors group">
               Start Contributing <FaArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
-            </a>
+            </a> */}
           </div>
 
           {/* Links grid */}

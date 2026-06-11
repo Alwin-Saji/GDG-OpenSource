@@ -19,6 +19,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
+      document.body.classList.add('app-loaded');
     }, 2800);
     return () => clearTimeout(timer);
   }, []);
@@ -40,12 +41,14 @@ function App() {
       <FloatingElements />
       <Navbar />
       
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contributor-guidelines" element={<ContributorGuidelines />} />
-        <Route path="/maintainer-guidelines" element={<MaintainerGuidelines />} />
-      </Routes>
+      <div className="relative z-10">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contributor-guidelines" element={<ContributorGuidelines />} />
+          <Route path="/maintainer-guidelines" element={<MaintainerGuidelines />} />
+        </Routes>
+      </div>
 
       <Footer />
     </div>

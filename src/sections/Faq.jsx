@@ -19,7 +19,7 @@ const faqData = [
   },
   {
     question: "Can I use AI tools like ChatGPT or GitHub Copilot?",
-    answer: "AI assistance may be permitted.Maintainers may ask you to explain your implementation. Blindly pasting generated code you do not understand is not acceptable",
+    answer: "AI assistance may be permitted.Maintainers may ask you to explain your implementation. Blindly pasting generated code you do not understand is not acceptable.",
     color: "#5BB974" // Medium Green
   },
   {
@@ -37,7 +37,7 @@ const Faq = () => {
   };
 
   return (
-    <section id="faq" className="py-16 md:py-32 relative">
+    <section id="faqs" className="py-16 md:py-32 relative">
       <div className="w-[80vw] md:w-full max-w-3xl mx-auto md:px-6 lg:px-8">
         
         <div className="mb-10 md:mb-16">
