@@ -6,24 +6,24 @@ const About = () => {
     {
       id: "01",
       icon: <MdAdsClick className="text-[#4285F4] w-6 h-6 md:w-8 md:h-8" />,
-      title: "Precision Targeting",
-      description: "Contribute to high-impact algorithms that solve real-world complexities. Your code directly powers the next generation of solutions.",
+      title: "Hands-On Contribution",
+      description: "Pick real issues from curated open source projects, work directly with maintainers, and get your pull requests reviewed and merged into production codebases.",
       borderColor: "group-hover:bg-[#4285F4]",
       textColor: "group-hover:text-[#4285F4]"
     },
     {
       id: "02",
       icon: <MdGroups className="text-[#EA4335] w-6 h-6 md:w-8 md:h-8" />,
-      title: "Collective Intelligence",
-      description: "Interface with a diverse network of developers and mentors who are actively pushing the boundaries of open-source architecture.",
+      title: "Guided by Maintainers",
+      description: "Every project comes with a dedicated maintainer who knows the codebase inside out — they'll assign issues, review your PRs, and help you grow as a contributor.",
       borderColor: "group-hover:bg-[#EA4335]",
       textColor: "group-hover:text-[#EA4335]"
     },
     {
       id: "03",
       icon: <MdBolt className="text-[#34A853] w-6 h-6 md:w-8 md:h-8" />,
-      title: "Velocity Acceleration",
-      description: "Exponentially increase your technical capabilities through high-velocity iteration and deep code reviews.",
+      title: "Build Your GitHub Profile",
+      description: "Every merged PR is a permanent mark on your GitHub. Walk away from GDG Season of Code with real contributions, real experience, and a profile that speaks for itself.",
       borderColor: "group-hover:bg-[#34A853]",
       textColor: "group-hover:text-[#34A853]"
     }
