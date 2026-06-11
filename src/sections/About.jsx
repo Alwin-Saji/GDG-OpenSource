@@ -40,7 +40,7 @@ const About = () => {
             <span className="font-medium text-transparent bg-clip-text bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC04,#34A853)]">Contribute?</span>
           </h2>
           <p className="text-[#E8D98A] text-lg md:text-base lg:text-lg max-w-md leading-relaxed pb-1 md:pb-2">
-          Season of Code is a community-run open source program by GDG on Campus CEC, designed to break down the barrier between writing code and contributing to real-world projects.Beginner or experienced — you'll find a project that fits. Maintainers guide you, the community supports you, and your pull requests actually matter.
+          Season of Code is a community-run open source program by GDG on Campus CEC, designed to break down the barrier between writing code and contributing to real-world projects. Beginner or experienced — you'll find a project that fits. Maintainers guide you, the community supports you, and your pull requests actually matter.
           </p>
         </div>
 
