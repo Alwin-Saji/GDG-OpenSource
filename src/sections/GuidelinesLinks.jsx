@@ -30,7 +30,7 @@ const GuidelinesLinks = () => {
               </p>
               <Link
                 to="/contributor-guidelines"
-                className="pointer-events-auto px-8 py-3 bg-black hover:bg-white hover:text-black text-white rounded-full font-medium transition-colors"
+                className="pointer-events-auto px-8 py-3 bg-[#E8D98A] text-[#5A0F15] hover:bg-[#5A0F15] hover:text-[#E8D98A] border border-[#3f080d] rounded-full font-medium transition-colors"
               >
                 View Guidelines
               </Link>
@@ -56,7 +56,7 @@ const GuidelinesLinks = () => {
               </p>
               <Link
                 to="/maintainer-guidelines"
-                className="pointer-events-auto px-8 py-3 bg-gray-50 text-gray-900 hover:bg-black hover:text-white rounded-full font-medium transition-colors"
+                className="pointer-events-auto px-8 py-3 bg-[#791a22] text-[#E8D98A] hover:bg-[#E8D98A] hover:text-[#5A0F15] border border-[#3f080d] rounded-full font-medium transition-colors"
               >
                 View Guidelines
               </Link>
