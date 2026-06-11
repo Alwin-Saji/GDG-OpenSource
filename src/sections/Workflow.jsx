@@ -242,7 +242,7 @@ const Workflow = () => {
                         {/* Content */}
                         <div className="relative z-10 group">
                           <h3 className={`text-md uppercase font-doto font-semibold md:text-xl text-[#B8C7A8] ${step.hoverText} mb-1.5 tracking-tight transition-colors duration-300`}>
-                           {step.title}
+                            {step.title}
                           </h3>
                           <p className="text-[#E8D98A] group-hover:text-white text-[12px] md:text-sm leading-relaxed max-w-sm transition-colors duration-300">
                             {step.description}
@@ -285,7 +285,7 @@ const Workflow = () => {
         </motion.div>
 
         <div className="relative overflow-hidden pb-12 hide-scrollbar">
-          <div className="min-w-[1000px] relative pt-12 px-4" ref={timelineContentRef}>
+          <div className="min-w-[1200px] relative pt-12 px-4" ref={timelineContentRef}>
             {/* Horizontal Track with Gradient */}
             <div className="absolute top-[55px] left-0 right-0 h-[1px] bg-gradient-to-r from-white/70 via-white to-white/70"></div>
 

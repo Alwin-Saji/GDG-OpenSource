@@ -69,7 +69,7 @@ const Navbar = () => {
               <img 
                 src={gdgLogo} 
                 alt="GDG Logo" 
-                className="w-10 h-10 transition-transform duration-300 group-hover:scale-110"
+                className="w-12 h-10 transition-transform duration-300 group-hover:scale-110"
               />
               <div className="flex flex-col -space-y-1">
                 <span className="text-base font-semibold tracking-tight text-white">

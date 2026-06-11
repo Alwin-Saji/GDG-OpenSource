@@ -9,7 +9,7 @@ const Footer = () => {
 
         {/* Main Footer Content */}
         <div className="flex flex-col md:flex-row justify-between items-start gap-10 md:gap-16 mb-16">
-          
+
           {/* Brand */}
           <div className="flex flex-col items-start max-w-sm w-full">
             <h2 className="text-xl font-doto sm:text-2xl font-extrabold text-white tracking-tight mb-3 flex items-center gap-2">
@@ -19,7 +19,7 @@ const Footer = () => {
                 <span className="w-2 h-2 rounded-full bg-[#FBBC04]"></span>
                 <span className="w-2 h-2 rounded-full bg-[#34A853]"></span>
               </div>
-                Season of Code
+              Season of Code
             </h2>
             <p className="text-[#E8D98A] text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">
               Write code that matters.
@@ -74,14 +74,14 @@ const Footer = () => {
                       <span className="text-sm font-medium text-[#B8C7A8]">Email</span>
                       <span className="text-sm text-gray-300 group-hover:text-white transition-colors">gdgoncampuscec@gmail.com</span>
                     </div>
-                  </a> 
+                  </a>
                 </li>
                 <li>
                   <a href="https://maps.google.com/?q=College+of+Engineering+Chengannur" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 group">
                     <FaMapMarkerAlt className="text-gray-300 mt-0.5 group-hover:text-white transition-colors" size={14} />
                     <div className="flex flex-col">
                       <span className="text-sm font-medium text-[#B8C7A8]">Location</span>
-                      <span className="text-sm text-gray-300 group-hover:text-white transition-colors">College of Engineering Chengannur,<br/>Alappuzha, Kerala - 689121</span>
+                      <span className="text-sm text-gray-300 group-hover:text-white transition-colors">College of Engineering Chengannur,<br />Alappuzha, Kerala - 689121</span>
                     </div>
                   </a>
                 </li>
@@ -96,7 +96,7 @@ const Footer = () => {
           <p className="text-xs sm:text-sm text-gray-300">
             &copy; {new Date().getFullYear()} GDG on Campus CEC. All rights reserved.
           </p>
-          
+
           <div className="flex gap-5">
             <a href="https://www.instagram.com/gdg_oncampus_cec?igsh=MXI1b2JsNGszeG16cg==" className="text-gray-300 hover:text-[#E1306C] transition-colors" aria-label="Instagram">
               <FaInstagram size={16} className="sm:w-[18px] sm:h-[18px]" />

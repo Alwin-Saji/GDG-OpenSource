@@ -54,7 +54,7 @@ const Timeline = () => {
         </div>
 
         <div className="relative overflow-x-auto pb-8 hide-scrollbar">
-          <div className="min-w-[700px] sm:min-w-[900px] relative pt-6">
+          <div className="min-w-[800px] sm:min-w-[1000px] relative pt-6">
             {/* Horizontal Track */}
             <div className="absolute top-[31px] left-0 right-0 h-[2px] bg-gray-100 rounded-full"></div>
 
