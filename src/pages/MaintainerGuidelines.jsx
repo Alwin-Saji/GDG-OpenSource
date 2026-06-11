@@ -44,7 +44,7 @@ const MaintainerGuidelines = () => {
       content: (
         <>
           <p>Open source involves diverse opinions. When disagreements happen, refer immediately back to our Code of Conduct.</p>
-          <p className="mt-4">Attempt to de-escalate discussions, focus on technical merits, and never hesitate to bring in other maintainers for a second opinion.</p>
+          <p className="mt-4">Attempt to de-escalate discussions, focus on technical merits, and never hesitate to bring in the co-maintainers for a second opinion.</p>
         </>
       ),
       color: "#EA4335" // Red
