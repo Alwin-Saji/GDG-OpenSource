@@ -2,7 +2,6 @@ import React from 'react';
 import Hero from '../sections/Hero';
 import About from '../sections/About';
 import Workflow from '../sections/Workflow';
-import Maintainers from '../sections/Maintainers';
 import Leaderboard from '../sections/Leaderboard';
 import Faq from '../sections/Faq';
 
@@ -17,8 +16,6 @@ const Home = () => {
       <About />
       <SectionDivider />
       <Workflow />
-      <SectionDivider />
-      <Maintainers />
       <SectionDivider />
       {/* <Leaderboard /> */}
       {/* <SectionDivider /> */}
