@@ -58,14 +58,14 @@ const Footer = () => {
               <h4 className="text-[#E8D98A] font-semibold mb-4 text-sm">Contact</h4>
               <ul className="space-y-4">
                 <li>
-                  <a href="#" className="flex items-start gap-2 sm:gap-3 group">
+                  <div className="flex items-start gap-2 sm:gap-3 group">
                     <FaPhoneAlt className="text-gray-300 mt-0.5 group-hover:text-white transition-colors" size={12} />
                     <div className="flex flex-col">
                       <span className="text-xs sm:text-sm font-medium text-[#B8C7A8]">Phone</span>
-                      <span className="text-xs sm:text-sm text-gray-300 group-hover:text-white transition-colors">+91 91882 86360</span>
-                      <span className="text-xs sm:text-sm text-gray-300 group-hover:text-white transition-colors">+91 90375 14241</span>
+                      <a href="tel:+919188286360" className="text-xs sm:text-sm text-gray-300 hover:text-white transition-colors">+91 91882 86360</a>
+                      <a href="tel:+919037514241" className="text-xs sm:text-sm text-gray-300 hover:text-white transition-colors">+91 90375 14241</a>
                     </div>
-                  </a>
+                  </div>
                 </li>
                 <li>
                   <a href="mailto:gdgoncampuscec@gmail.com" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 sm:gap-3 group">
