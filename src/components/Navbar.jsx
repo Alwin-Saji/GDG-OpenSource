@@ -74,7 +74,7 @@ const Navbar = () => {
                 Home
               </Link>
               <Link
-                to="/projects"
+                to="#"
                 className="px-4 py-2 text-sm font-medium text-[#E8D98A]/70 hover:text-[#E8D98A] transition-all duration-300"
               >
                 Projects
