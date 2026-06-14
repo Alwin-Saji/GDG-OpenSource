@@ -26,12 +26,12 @@ const projects = [
   },
   {
     id: 3,
-    name: 'DevFest App Template',
-    description: 'A customizable open-source template for DevFest mobile applications. Features schedules, speaker bios, and real-time updates.',
-    tags: ['React Native', 'Firebase', 'Mobile'],
-    githubUrl: 'https://github.com/example/devfest-app',
-    stars: 340,
-    forks: 89,
+    name: 'PharmaNear',
+    description: 'Full-stack web application designed to bridge the gap between users searching for specific medicines and nearby pharmacies that stock them. It offers an intuitive search experience for users and a secure admin dashboard for pharmacy owners to manage inventory and profile details efficiently.',
+    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'CSS', 'Render'],
+    githubUrl: 'https://github.com/Foces-core/PharmaNear-by-Foces',
+    stars: 0,
+    forks: 2,
     color: 'bg-yellow-500'
   },
   {
