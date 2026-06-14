@@ -64,6 +64,16 @@ const projects = [
     forks: 0,
     color: 'bg-red-500'
   },
+  {
+    id: 7,
+    name: 'Lost and Found',
+    description: 'Full-stack web application built to simplify reporting, discovering, and claiming lost items within the college campus. The platform provides a secure and organized workflow where students can upload found/lost items, browse listings, claim belongings, and track item ownership using student authentication.',
+    tags: ['HTML', 'Django'],
+    githubUrl: 'https://github.com/AswathyyM/lost_and_found_portal',
+    stars: 0,
+    forks: 0,
+    color: 'bg-red-500'
+  },
 ];
 
 const ProjectCard = ({ project }) => {
