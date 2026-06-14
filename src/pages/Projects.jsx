@@ -6,12 +6,12 @@ import { MdArrowForward } from 'react-icons/md';
 const projects = [
   {
     id: 1,
-    name: 'GDG Open Source Hub',
-    description: 'The official GDG open source hub website where contributors can find guidelines, workflow, and projects to contribute to. Built with React and TailwindCSS.',
-    tags: ['React', 'Tailwind CSS', 'Framer Motion'],
-    githubUrl: 'https://github.com/Alwin-Saji/Blog',
-    stars: 128,
-    forks: 34,
+    name: 'AgriScope',
+    description: 'Real-time Agricultural Intelligence Dashboard for Kerala's 14 districts. Combines live weather, crop health scoring, market prices, flood risk, disease alerts, NASA satellite imagery, and Gemini AI advisory in a single browser app.',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    githubUrl: 'https://github.com/vvramxcec/agriscope',
+    stars: 0,
+    forks: 0,
     color: 'bg-blue-500'
   },
   {
@@ -145,10 +145,10 @@ const Projects = () => {
             <span className="text-xs sm:text-sm font-semibold tracking-widest text-gray-100 uppercase">Directory</span>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-7xl font-bold text-white font-doto mb-4 sm:mb-6 tracking-tight">
-            Projects & Initiatives
+            Projects
           </h1>
           <p className="text-base sm:text-lg text-[#E8D98A] leading-relaxed">
-            Explore the open-source projects we are currently building. Dive into the codebase, suggest improvements, and collaborate with the community.
+            Explore the open-source projects. Dive into the codebase
           </p>
         </motion.div>
 
