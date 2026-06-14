@@ -183,8 +183,6 @@ const Projects = () => {
           transition={{ delay: 0.3, duration: 0.5 }}
           className="hidden md:block text-right"
         >
-          <p className="text-xs sm:text-sm font-medium text-white uppercase tracking-widest mb-1">Total Repositories</p>
-          <p className="text-2xl sm:text-3xl font-bold text-yellow-300">{projects.length}</p>
         </motion.div>
       </div>
 
