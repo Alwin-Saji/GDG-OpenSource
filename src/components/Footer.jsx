@@ -3,6 +3,12 @@ import { FaGithub, FaTwitter, FaLinkedin, FaDiscord, FaArrowRight, FaPhoneAlt, F
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const scrollToTop = () => {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 50);
+  };
+
   return (
     <footer className="pt-20 pb-10 border-t mt-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,7 +42,7 @@ const Footer = () => {
               <h4 className="text-[#E8D98A] font-semibold mb-3 sm:mb-4 text-xs sm:text-sm">Navigation</h4>
               <ul className="space-y-2 sm:space-y-3 font-semibold">
                 <li><a href="/#about" className="text-xs sm:text-sm text-[#B8C7A8] hover:text-white transition-colors">About</a></li>
-                <li><Link to="/projects" className="text-xs sm:text-sm text-[#B8C7A8] hover:text-white transition-colors">Projects</Link></li>
+                <li><Link to="/projects" onClick={scrollToTop} className="text-xs sm:text-sm text-[#B8C7A8] hover:text-white transition-colors">Projects</Link></li>
                 <li><a href="/#workflow" className="text-xs sm:text-sm text-[#B8C7A8] hover:text-white transition-colors">Workflow</a></li>
                 <li><a href="/#leaderboard" className="text-xs sm:text-sm text-[#B8C7A8] hover:text-white transition-colors">Leaderboard</a></li>
                 <li><a href="/#faq" className="text-xs sm:text-sm text-[#B8C7A8] hover:text-white transition-colors">FAQ</a></li>
@@ -47,8 +53,8 @@ const Footer = () => {
             <div>
               <h4 className="text-[#E8D98A] font-semibold mb-3 sm:mb-4 text-xs sm:text-sm">Resources</h4>
               <ul className="space-y-2 sm:space-y-3 font-semibold">
-                <li><Link to="/contributor-guidelines" className="text-xs sm:text-sm text-[#B8C7A8] hover:text-white transition-colors">Contributors</Link></li>
-                <li><Link to="/maintainer-guidelines" className="text-xs sm:text-sm text-[#B8C7A8] hover:text-white transition-colors">Maintainers</Link></li>
+                <li><Link to="/contributor-guidelines" onClick={scrollToTop} className="text-xs sm:text-sm text-[#B8C7A8] hover:text-white transition-colors">Contributors</Link></li>
+                <li><Link to="/maintainer-guidelines" onClick={scrollToTop} className="text-xs sm:text-sm text-[#B8C7A8] hover:text-white transition-colors">Maintainers</Link></li>
                 {/* <li><a href="#" className="text-sm text-gray-500 hover:text-black transition-colors">Documentation</a></li>
                 <li><a href="#" className="text-sm text-gray-500 hover:text-black transition-colors">API Reference</a></li> */}
               </ul>
