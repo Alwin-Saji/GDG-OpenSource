@@ -52,7 +52,7 @@ const projects = [
     githubUrl: 'https://github.com/VismayaGawriKrishnan/VIORA-AI',
     stars: 1,
     forks: 1,
-    color: 'bg-red-500'
+    color: 'bg-blue-500'
   },
   {
     id: 6,
@@ -62,7 +62,7 @@ const projects = [
     githubUrl: 'https://github.com/devadarshmay-eng/RavenEye',
     stars: 1,
     forks: 0,
-    color: 'bg-red-500'
+    color: 'bg-green-500'
   },
   {
     id: 7,
@@ -72,7 +72,7 @@ const projects = [
     githubUrl: 'https://github.com/AswathyyM/lost_and_found_portal',
     stars: 0,
     forks: 0,
-    color: 'bg-red-500'
+    color: 'bg-yellow-500'
   },
 ];
 
