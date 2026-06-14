@@ -7,7 +7,7 @@ const projects = [
   {
     id: 1,
     name: 'AgriScope',
-    description: "Real-time Agricultural Intelligence Dashboard for Kerala's 14 districts. Combines live weather, crop health scoring, market prices, flood risk, disease alerts, NASA satellite imagery, and Gemini AI advisory in a single browser app.",
+    description: "Real-time Agricultural Intelligence Web Dashboard for Kerala's 14 districts. Combines live weather, crop health scoring, market prices, flood risk, disease alerts, NASA satellite imagery, and Gemini AI advisory in a single browser app.",
     tags: ['HTML', 'CSS', 'JavaScript'],
     githubUrl: 'https://github.com/vvramxcec/agriscope',
     stars: 0,
@@ -17,7 +17,7 @@ const projects = [
   {
     id: 2,
     name: 'Bunkmate',
-    description: 'Smart Attendance Tracker for Students',
+    description: 'Smart Attendance Tracker Mobile Application for Students',
     tags: ['React Native', 'Expo'],
     githubUrl: 'https://github.com/kichu12348/BunkMate',
     stars: 0,
@@ -36,14 +36,34 @@ const projects = [
   },
   {
     id: 4,
-    name: 'Community Dashboard',
-    description: 'An interactive web dashboard for monitoring community engagement, membership growth, and event analytics.',
-    tags: ['React', 'D3.js', 'Data Visualization'],
-    githubUrl: 'https://github.com/example/community-dashboard',
-    stars: 210,
-    forks: 56,
+    name: 'Media Authentication Platform',
+    description: 'Dual-layer invisible watermarking and perceptual fingerprinting for robust image provenance, tamper detection, and Watermarking-as-a-Service (WaaS).',
+    tags: ['Go', 'React'],
+    githubUrl: 'https://github.com/JacobGeorgeMathew/MiniProject_Media_Authentication_Platform-',
+    stars: 1,
+    forks: 0,
     color: 'bg-red-500'
-  }
+  },
+  {
+    id: 5,
+    name: 'Viora AI',
+    description: 'Advanced health, fitness, and diet companion web platform. Powered by the Google Gemini API, it provides users with real-time, context-aware insights, AI-driven food scanning, and personalized wellness plans to elevate their lifestyle',
+    tags: ['React', 'Vite', 'TypeScript', 'Radix', 'Gemini API'],
+    githubUrl: 'https://github.com/VismayaGawriKrishnan/VIORA-AI',
+    stars: 1,
+    forks: 1,
+    color: 'bg-red-500'
+  },
+  {
+    id: 6,
+    name: 'Octant OCR',
+    description: 'Browser extension framework designed for fast text capture from web pages, PDFs, videos, and visual content where direct copy is not available. It provides a lightweight capture flow and immediately returns extracted text for copying and reuse.',
+    tags: ['TypeScript', 'Node.js', 'Vite/Webpack', 'ONNX Runtime', 'OpenCV.js','SymSpell'],
+    githubUrl: 'https://github.com/devadarshmay-eng/RavenEye',
+    stars: 1,
+    forks: 0,
+    color: 'bg-red-500'
+  },
 ];
 
 const ProjectCard = ({ project }) => {
@@ -154,7 +174,7 @@ const Projects = () => {
           className="hidden md:block text-right"
         >
           <p className="text-xs sm:text-sm font-medium text-white uppercase tracking-widest mb-1">Total Repositories</p>
-          <p className="text-2xl sm:text-3xl font-bold text-red-500">{projects.length}</p>
+          <p className="text-2xl sm:text-3xl font-bold text-yellow-300">{projects.length}</p>
         </motion.div>
       </div>
 
