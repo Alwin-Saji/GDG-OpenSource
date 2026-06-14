@@ -79,14 +79,14 @@ const Hero = () => {
         </div>
 
         {/* CTA Buttons */}
-        {/* <div className="flex flex-col sm:flex-row gap-6 mt-2 mb-10">
+        <div className="flex flex-col sm:flex-row gap-6 mt-2 mb-10">
           <a href="#register" className="px-8 py-4 bg-[#E8D98A] text-[#300000] font-bold rounded-full hover:bg-[#d4c575] hover:scale-105 transition-all shadow-lg text-lg flex items-center justify-center">
             Register Now
           </a>
           <a href="#" className="px-8 py-4 bg-transparent border-2 border-[#B8C7A8] text-[#B8C7A8] font-bold rounded-full hover:bg-[#B8C7A8] hover:text-[#300000] hover:scale-105 transition-all shadow-lg text-lg flex items-center justify-center">
             Explore Projects
           </a>
-        </div> */}
+        </div>
 
         {/* Pixelated/Monospace Tagline */}
         <div className="mt-4 mb-16 font-mono flex flex-wrap justify-center gap-x-4">

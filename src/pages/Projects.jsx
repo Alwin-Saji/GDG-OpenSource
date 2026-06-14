@@ -98,7 +98,7 @@ const ProjectCard = ({ project }) => {
           </div>
         </div>
 
-        <p className="text-white mb-4 sm:mb-6 font-light leading-relaxed max-w-3xl text-sm sm:text-base">
+        <p className="text-[#E8D98A] mb-4 sm:mb-6 leading-relaxed max-w-3xl text-sm sm:text-base">
           {project.description}
         </p>
 
@@ -147,7 +147,7 @@ const Projects = () => {
           <h1 className="text-3xl sm:text-4xl md:text-7xl font-bold text-white font-doto mb-4 sm:mb-6 tracking-tight">
             Projects & Initiatives
           </h1>
-          <p className="text-base sm:text-lg text-gray-100 font-light leading-relaxed">
+          <p className="text-base sm:text-lg text-[#E8D98A] leading-relaxed">
             Explore the open-source projects we are currently building. Dive into the codebase, suggest improvements, and collaborate with the community.
           </p>
         </motion.div>

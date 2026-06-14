@@ -90,12 +90,13 @@ const Navbar = () => {
               >
                 Home
               </Link>
-              {/* <Link
-                to="#"
+              <Link
+                to="/projects"
+                onClick={scrollToTop}
                 className="px-4 py-2 text-sm font-medium text-[#E8D98A]/70 hover:text-[#E8D98A] transition-all duration-300"
               >
                 Projects
-              </Link> */}
+              </Link>
               {/* {['Workflow', 'Leaderboard', 'FAQs'].map((item) => (
                 <a
                   key={item}
@@ -133,11 +134,11 @@ const Navbar = () => {
             </div>
 
             {/* Action Button with scale & shadow hover */}
-            {/* <div className="hidden md:block">
-              <a href="/#register" className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium text-black bg-white rounded-full overflow-hidden shadow-md shadow-black/10 hover:shadow-lg hover:shadow-black/20 hover:bg-black hover:text-white transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0">
+            <div className="hidden md:block">
+              <a href="/#register" className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium text-black bg-white rounded-full overflow-hidden shadow-md shadow-black/10 hover:shadow-lg hover:shadow-black/20 hover:bg-[#E8D98A] hover:text-[#300000] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0">
                 Register
               </a>
-            </div> */}
+            </div>
 
             {/* Mobile Toggle */}
             <div className="md:hidden">
@@ -167,8 +168,8 @@ const Navbar = () => {
                   Home
                 </Link>
                 <Link
-                  to="#"
-                  onClick={() => setIsOpen(false)}
+                  to="/projects"
+                  onClick={() => { setIsOpen(false); scrollToTop(); }}
                   className="block px-4 py-3 text-base font-medium text-[#E8D98A]/70 hover:text-[#E8D98A] hover:bg-white/5 rounded-xl transition-all duration-300"
                 >
                   Projects
@@ -192,11 +193,11 @@ const Navbar = () => {
                   </div>
                 </div>
 
-                {/* <div className="pt-2 pb-1 px-2">
+                <div className="pt-2 pb-1 px-2">
                   <a href="/#register" onClick={() => setIsOpen(false)} className="block w-full text-center px-4 py-3 text-base font-medium text-[#4A0A0F] bg-[#E8D98A] rounded-xl hover:bg-white transition-colors shadow-md">
                     Register
                   </a>
-                </div> */}
+                </div>
               </div>
             </div>
           </div>
