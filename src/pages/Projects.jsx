@@ -16,12 +16,12 @@ const projects = [
   },
   {
     id: 2,
-    name: 'Event Manager CLI',
-    description: 'A command-line tool for organizing and managing local GDG events, RSVPs, and speaker schedules efficiently.',
-    tags: ['Node.js', 'CLI', 'Automation'],
-    githubUrl: 'https://github.com/example/event-cli',
-    stars: 85,
-    forks: 12,
+    name: 'Bunkmate',
+    description: 'Smart Attendance Tracker for Students',
+    tags: ['React Native', 'Expo'],
+    githubUrl: 'https://github.com/kichu12348/BunkMate',
+    stars: 0,
+    forks: 1,
     color: 'bg-green-500'
   },
   {
@@ -92,9 +92,6 @@ const ProjectCard = ({ project }) => {
             {project.name}
           </h3>
           <div className="flex items-center space-x-2 sm:space-x-3 text-xs font-medium text-gray-700 bg-white px-3 py-1.5 rounded-md border border-gray-200 w-fit">
-            <span className="flex items-center"><FaStar className="mr-1 sm:mr-1.5 text-gray-500 group-hover:text-yellow-400 transition-colors duration-300" size={12} /> {stats.stars}</span>
-            <span className="w-px h-3 bg-gray-300"></span>
-            <span className="flex items-center"><FaCodeBranch className="mr-1 sm:mr-1.5 text-gray-500 group-hover:text-blue-500 transition-colors duration-300" size={12} /> {stats.forks}</span>
           </div>
         </div>
 
