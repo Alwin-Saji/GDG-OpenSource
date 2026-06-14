@@ -194,7 +194,7 @@ const Navbar = () => {
                 </div>
 
                 <div className="pt-2 pb-1 px-2">
-                  <a href="/#register" onClick={() => setIsOpen(false)} className="block w-full text-center px-4 py-3 text-base font-medium text-[#4A0A0F] bg-[#E8D98A] rounded-xl hover:bg-white transition-colors shadow-md">
+                  <a href="https://forms.gle/pc2TVDNfvtne535Q7" onClick={() => setIsOpen(false)} className="block w-full text-center px-4 py-3 text-base font-medium text-[#4A0A0F] bg-[#E8D98A] rounded-xl hover:bg-white transition-colors shadow-md">
                     Register
                   </a>
                 </div>
