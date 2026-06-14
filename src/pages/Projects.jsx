@@ -91,8 +91,6 @@ const ProjectCard = ({ project }) => {
           <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-tight">
             {project.name}
           </h3>
-          <div className="flex items-center space-x-2 sm:space-x-3 text-xs font-medium text-gray-700 bg-white px-3 py-1.5 rounded-md border border-gray-200 w-fit">
-          </div>
         </div>
 
         <p className="text-[#E8D98A] mb-4 sm:mb-6 leading-relaxed max-w-3xl text-sm sm:text-base">
