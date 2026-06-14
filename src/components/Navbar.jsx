@@ -135,7 +135,7 @@ const Navbar = () => {
 
             {/* Action Button with scale & shadow hover */}
             <div className="hidden md:block">
-              <a href="https://forms.gle/pc2TVDNfvtne535Q7" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium text-black bg-white rounded-full overflow-hidden shadow-md shadow-black/10 hover:shadow-lg hover:shadow-black/20 hover:bg-[#E8D98A] hover:text-[#300000] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0">
+              <a href="https://forms.gle/pc2TVDNfvtne535Q7" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium text-black bg-yellow-50 rounded-full overflow-hidden shadow-md shadow-black/10 hover:shadow-lg hover:shadow-black/20 hover:bg-[#E8D98A] hover:text-[#300000] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0">
                 Register
               </a>
             </div>
