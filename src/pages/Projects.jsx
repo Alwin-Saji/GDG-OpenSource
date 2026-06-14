@@ -7,7 +7,7 @@ const projects = [
   {
     id: 1,
     name: 'AgriScope',
-    description: 'Real-time Agricultural Intelligence Dashboard for Kerala's 14 districts. Combines live weather, crop health scoring, market prices, flood risk, disease alerts, NASA satellite imagery, and Gemini AI advisory in a single browser app.',
+    description: "Real-time Agricultural Intelligence Dashboard for Kerala's 14 districts. Combines live weather, crop health scoring, market prices, flood risk, disease alerts, NASA satellite imagery, and Gemini AI advisory in a single browser app.",
     tags: ['HTML', 'CSS', 'JavaScript'],
     githubUrl: 'https://github.com/vvramxcec/agriscope',
     stars: 0,
