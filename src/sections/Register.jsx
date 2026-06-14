@@ -15,11 +15,11 @@ const Register = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <button className="flex items-center justify-center space-x-3 px-6 sm:px-8 py-3 sm:py-4 bg-black text-white rounded-xl text-sm sm:text-base font-bold hover:bg-gray-800 transition-colors group">
+            <a href="https://forms.gle/pc2TVDNfvtne535Q7" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center space-x-3 px-6 sm:px-8 py-3 sm:py-4 bg-black text-white rounded-xl text-sm sm:text-base font-bold hover:bg-gray-800 transition-colors group">
               <FaGithub size={18} className="sm:w-5 sm:h-5" />
               <span>Register via GitHub</span>
               <MdChevronRight size={20} className="ml-1 group-hover:translate-x-1 transition-transform sm:w-6 sm:h-6" />
-            </button>
+            </a>
             <button className="flex items-center justify-center space-x-3 px-6 sm:px-8 py-3 sm:py-4 bg-white border border-gray-200 text-gray-700 rounded-xl text-sm sm:text-base font-bold hover:bg-gray-50 hover:border-gray-300 transition-all">
               <MdEmail size={18} className="text-gray-500 sm:w-5 sm:h-5" />
               <span>Subscribe Updates</span>
