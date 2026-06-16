@@ -74,6 +74,16 @@ const projects = [
     forks: 0,
     color: 'bg-yellow-500'
   },
+  {
+    id: 8,
+    name: 'ARC (Auto-Real-time Capture)',
+    description: 'Web application designed to facilitate real-time photo sharing and capture.',
+    tags: ['React', 'CSS'],
+    githubUrl: 'https://github.com/Alwin-Saji/QR',
+    stars: 0,
+    forks: 0,
+    color: 'bg-red-500'
+  }
 ];
 
 const ProjectCard = ({ project }) => {
