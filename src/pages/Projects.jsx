@@ -93,7 +93,7 @@ const projects = [
     stars: 0,
     forks: 0,
     color: 'bg-blue-500'
-  },
+  }
 ];
 
 const ProjectCard = ({ project }) => {
