@@ -83,7 +83,7 @@ const Hero = () => {
           <a href="https://forms.gle/pc2TVDNfvtne535Q7" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#E8D98A] text-[#300000] font-bold rounded-full hover:bg-[#d4c575] hover:scale-105 transition-all shadow-lg text-lg flex items-center justify-center">
             Register Now
           </a>
-          <a href="https://season-of-code.vercel.app/projects" className="px-8 py-4 bg-transparent border-2 border-[#B8C7A8] text-[#B8C7A8] font-bold rounded-full hover:bg-[#B8C7A8] hover:text-[#300000] hover:scale-105 transition-all shadow-lg text-lg flex items-center justify-center">
+          <a href="/projects" className="px-8 py-4 bg-transparent border-2 border-[#B8C7A8] text-[#B8C7A8] font-bold rounded-full hover:bg-[#B8C7A8] hover:text-[#300000] hover:scale-105 transition-all shadow-lg text-lg flex items-center justify-center">
             Explore Projects
           </a>
         </div>
