@@ -83,7 +83,17 @@ const projects = [
     stars: 0,
     forks: 0,
     color: 'bg-red-500'
-  }
+  },
+  {
+    id: 9,
+    name: 'Smart Mess',
+    description: 'Web application that provides a centralized platform to manage hostel mess operations.',
+    tags: ['Java','PostgreSQL','React', 'CSS'],
+    githubUrl: 'https://github.com/rinpoche-06/hms',
+    stars: 0,
+    forks: 0,
+    color: 'bg-blue-500'
+  },
 ];
 
 const ProjectCard = ({ project }) => {
