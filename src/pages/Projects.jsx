@@ -56,9 +56,9 @@ const projects = [
   },
   {
     id: 6,
-    name: 'Octant OCR',
-    description: 'Browser extension framework designed for fast text capture from web pages, PDFs, videos, and visual content where direct copy is not available. It provides a lightweight capture flow and immediately returns extracted text for copying and reuse.',
-    tags: ['TypeScript', 'Node.js', 'Vite/Webpack', 'ONNX Runtime', 'OpenCV.js','SymSpell'],
+    name: 'RavenEye',
+    description: 'A browser extension that extracts selectable text from images and web content using OCR, making captured text searchable and copyable. Built as a lightweight client-sidle extension for fast, on-page text extraction. ',
+    tags: ['TypeScript', 'JavaScript', 'CSS', 'HTML'],
     githubUrl: 'https://github.com/devadarshmay-eng/RavenEye',
     stars: 1,
     forks: 0,
