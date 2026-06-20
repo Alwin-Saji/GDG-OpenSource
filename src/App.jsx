@@ -7,11 +7,14 @@ import FloatingElements from './components/FloatingElements';
 import CustomScrollbar from './components/CustomScrollbar';
 import Loader from './components/Loader';
 
+import ScrollToTop from './components/ScrollToTop';
+
 // Pages
 import Home from './pages/Home';
 import ContributorGuidelines from './pages/ContributorGuidelines';
 import MaintainerGuidelines from './pages/MaintainerGuidelines';
 import Projects from './pages/Projects';
+import LeaderBoard from './pages/LeaderBoard';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,6 +29,7 @@ function App() {
 
   return (
     <div className={`relative min-h-screen overflow-x-hidden selection:bg-blue-500/30 ${isLoading ? 'h-screen overflow-hidden' : ''}`}>
+      <ScrollToTop />
       {/* Global Background Grid */}
       <div className="fixed inset-0 z-[0] pointer-events-none opacity-20"
            style={{
@@ -45,6 +49,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/leaderboard" element={<LeaderBoard />} />
           <Route path="/contributor-guidelines" element={<ContributorGuidelines />} />
           <Route path="/maintainer-guidelines" element={<MaintainerGuidelines />} />
         </Routes>

@@ -17,8 +17,8 @@ const Home = () => {
       <SectionDivider />
       <Workflow />
       <SectionDivider />
-      {/* <Leaderboard /> */}
-      {/* <SectionDivider /> */}
+      <Leaderboard />
+      <SectionDivider />
       <Faq />
       <SectionDivider />
       <GuidelinesLinks />

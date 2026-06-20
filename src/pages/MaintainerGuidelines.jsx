@@ -59,7 +59,7 @@ const MaintainerGuidelines = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
-          className="mb-20 md:mb-32"
+          className="mb-12 md:mb-20"
         >
           <h1 className="text-4xl sm:text-5xl md:text-7xl tracking-tighter text-white font-doto font-bold mb-6">
             Maintainer Manual.
@@ -68,6 +68,19 @@ const MaintainerGuidelines = () => {
             Principles, practices, and expectations for the stewards of our open-source ecosystem.
           </p>
         </motion.div>
+
+        <div className="flex justify-end mb-4">
+          <a
+            href="/Maintainer Handbook.pdf"
+            download
+            className="px-6 py-3 bg-[#E8D98A] text-[#300000] font-bold rounded-full shadow-[0_4px_0_#DAA520] hover:shadow-[0_2px_0_#bdae5b] hover:translate-y-[2px] active:shadow-none active:translate-y-[4px] transition-all duration-150 text-sm sm:text-base flex items-center justify-center gap-2"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            <span>Download Handbook</span>
+          </a>
+        </div>
 
         <div className="space-y-16 md:space-y-20">
           {sections.map((section, index) => (
