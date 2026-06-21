@@ -93,7 +93,17 @@ const projects = [
     stars: 0,
     forks: 0,
     color: 'bg-blue-500'
-  }
+  },
+  {
+    id: 10,
+    name: 'SPARE',
+    description: 'SPARE is a location-based mobile application built with React Native (Expo) and Firebase. It digitizes the unorganized two-wheeler service sector by connecting riders with real-time local spare parts inventory, nearby mechanics, and DIY repair tutorials.',
+    tags: ['React Native','Expo','Firebase'],
+    githubUrl: 'https://github.com/Naveen-2255/SPARE',
+    stars: 0,
+    forks: 0,
+    color: 'bg-yellow-500'
+  },
 ];
 
 const ProjectCard = ({ project }) => {
