@@ -97,13 +97,13 @@ const Navbar = () => {
               >
                 Projects
               </Link>
-              {/* <Link
+              <Link
                 to="/leaderboard"
                 onClick={scrollToTop}
                 className="px-4 py-2 text-sm font-medium text-[#E8D98A]/70 hover:text-[#E8D98A] transition-all duration-300"
               >
                 Leaderboard
-              </Link> */}
+              </Link>
               {/* {['Workflow', 'Leaderboard', 'FAQs'].map((item) => (
                 <a
                   key={item}
@@ -113,7 +113,7 @@ const Navbar = () => {
                   {item}
                 </a>
               ))} */}
-              {['Workflow','FAQs'].map((item) => (
+              {['FAQs'].map((item) => (
                 <a
                   key={item}
                   href={`/#${item.toLowerCase()}`}
@@ -181,14 +181,14 @@ const Navbar = () => {
                 >
                   Projects
                 </Link>
-                {/* <Link
+                <Link
                   to="/leaderboard"
                   onClick={() => { setIsOpen(false); scrollToTop(); }}
                   className="block px-4 py-3 text-base font-medium text-[#E8D98A]/70 hover:text-[#E8D98A] hover:bg-white/5 rounded-xl transition-all duration-300"
                 >
                   Leaderboard
-                </Link> */}
-                {['Workflow', 'FAQs'].map((item) => (
+                </Link>
+                {['FAQs'].map((item) => (
                   <a
                     key={item}
                     href={`/#${item.toLowerCase()}`}
