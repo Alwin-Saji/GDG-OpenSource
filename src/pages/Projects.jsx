@@ -78,7 +78,7 @@ const projects = [
     id: 8,
     name: 'ARC (Auto-Real-time Capture)',
     description: 'Web application designed to facilitate real-time photo sharing and capture.',
-    tags: ['React','TailwindCSS','Firebase','JavaScript'],
+    tags: ['React','TailwindCSS','Supabase','JavaScript'],
     githubUrl: 'https://github.com/Alwin-Saji/QR',
     stars: 0,
     forks: 0,
