@@ -24,7 +24,10 @@ const Leaderboard = () => {
 
     setIsLoading(true);
     try {
-      const response = await fetch(CSV_URL);
+      const cacheBuster = new Date().getTime();
+      const response = await fetch(`${CSV_URL}&t=${cacheBuster}`, {
+        cache: 'no-store'
+      });
       const text = await response.text();
 
       // Split text by new lines
