@@ -34,36 +34,36 @@ const projects = [
     forks: 2,
     color: 'bg-yellow-500'
   },
-  {
-    id: 4,
-    name: 'Media Authentication Platform',
-    description: 'Dual-layer invisible watermarking and perceptual fingerprinting for robust image provenance, tamper detection, and Watermarking-as-a-Service (WaaS).',
-    tags: ['Go', 'React'],
-    githubUrl: 'https://github.com/JacobGeorgeMathew/MiniProject_Media_Authentication_Platform-',
-    stars: 1,
-    forks: 0,
-    color: 'bg-red-500'
-  },
-  {
-    id: 5,
-    name: 'Viora AI',
-    description: 'Advanced health, fitness, and diet companion web platform. Powered by the Google Gemini API, it provides users with real-time, context-aware insights, AI-driven food scanning, and personalized wellness plans to elevate their lifestyle',
-    tags: ['React', 'Vite', 'TypeScript', 'Radix', 'Gemini API'],
-    githubUrl: 'https://github.com/VismayaGawriKrishnan/VIORA-AI',
-    stars: 1,
-    forks: 1,
-    color: 'bg-blue-500'
-  },
-  {
-    id: 6,
-    name: 'RavenEye',
-    description: 'A browser extension that extracts selectable text from images and web content using OCR, making captured text searchable and copyable. Built as a lightweight client-sidle extension for fast, on-page text extraction. ',
-    tags: ['TypeScript', 'JavaScript', 'CSS', 'HTML'],
-    githubUrl: 'https://github.com/devadarshmay-eng/RavenEye',
-    stars: 1,
-    forks: 0,
-    color: 'bg-green-500'
-  },
+  // {
+  //   id: 4,
+  //   name: 'Media Authentication Platform',
+  //   description: 'Dual-layer invisible watermarking and perceptual fingerprinting for robust image provenance, tamper detection, and Watermarking-as-a-Service (WaaS).',
+  //   tags: ['Go', 'React'],
+  //   githubUrl: 'https://github.com/JacobGeorgeMathew/MiniProject_Media_Authentication_Platform-',
+  //   stars: 1,
+  //   forks: 0,
+  //   color: 'bg-red-500'
+  // },
+  // {
+  //   id: 5,
+  //   name: 'Viora AI',
+  //   description: 'Advanced health, fitness, and diet companion web platform. Powered by the Google Gemini API, it provides users with real-time, context-aware insights, AI-driven food scanning, and personalized wellness plans to elevate their lifestyle',
+  //   tags: ['React', 'Vite', 'TypeScript', 'Radix', 'Gemini API'],
+  //   githubUrl: 'https://github.com/VismayaGawriKrishnan/VIORA-AI',
+  //   stars: 1,
+  //   forks: 1,
+  //   color: 'bg-blue-500'
+  // },
+  // {
+  //   id: 6,
+  //   name: 'RavenEye',
+  //   description: 'A browser extension that extracts selectable text from images and web content using OCR, making captured text searchable and copyable. Built as a lightweight client-sidle extension for fast, on-page text extraction. ',
+  //   tags: ['TypeScript', 'JavaScript', 'CSS', 'HTML'],
+  //   githubUrl: 'https://github.com/devadarshmay-eng/RavenEye',
+  //   stars: 1,
+  //   forks: 0,
+  //   color: 'bg-green-500'
+  // },
   {
     id: 7,
     name: 'Lost and Found',
